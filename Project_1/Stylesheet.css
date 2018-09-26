@@ -1,6 +1,24 @@
 nav{
-    background-color: black;
+    background-color: white;
 }
 body{
-    background-color: white ;
+    background-color: lightblue ;
+}
+.container-fluid{
+    background-color: rgba(245, 245, 245, 0.856);
+
+}
+.space{
+    margin-right: 20px; 
+}
+
+.music{
+    background-image: url("Owari_no_seraph_wallpaper.jpg");
+}
+
+.nav-item{
+    padding: 10px;
+}
+.list{
+    background-color: aqua;
 }
