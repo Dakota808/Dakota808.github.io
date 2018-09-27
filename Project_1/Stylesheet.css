@@ -31,12 +31,19 @@ body{
     background-color: lightblue ;
 }
 
+.border{
+    background-color: beige;
+}
+
 table{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%; 
 }
 
+.sites{
+    background-color: lightblue;
+}
 .text{
     background-color: azure;
 }
