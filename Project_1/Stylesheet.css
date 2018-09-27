@@ -28,5 +28,11 @@ body{
     background-color: rgba(77, 192, 201, 0.726);
 }
 .container{
-    ackground-color: lightblue ;
+    background-color: lightblue ;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%; 
 }
