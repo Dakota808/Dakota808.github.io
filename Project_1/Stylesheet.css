@@ -36,3 +36,10 @@ table{
     border-collapse: collapse;
     width: 100%; 
 }
+
+.text{
+    background-color: azure;
+}
+h2{
+text-align: center;
+}
