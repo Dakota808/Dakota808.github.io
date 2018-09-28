@@ -8,4 +8,4 @@ My name is Dakota Koki I am a computer science major. Reason for this is to disp
 
 ### Projects
 Here is where all of the projects are located:
-[Homework #1](Dakota808.github.io\Project_1\index.md)
+[Homework #1](Project_1/index.md)
