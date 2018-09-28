@@ -1,6 +1,11 @@
----
+
 Title: Homework #1 Html, Bootstrap, CSS, GIT
----
+Here are links to my Repsoitory and my demo of my html pages:
+
+[Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1)
+[Demo](file:///C:/Users/Dakot/Desktop/CS_460/Dakota808.github.io/Project_1/index.html)
+[Main Page](https://dakota808.github.io/)
+
 
 Git commands:
 The git commands are the basic tools in order to link a repository between github or bitbucket so these tools are the most crucial parts to setup. 
