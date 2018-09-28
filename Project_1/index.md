@@ -37,5 +37,38 @@ git remote add https://github.com/Dakota808/Dakota808.github.io.git
 Here is an example of the git commit, status, add, and push:
 
 ```bash
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Project_1/index.md
+
+$ git add --all
+
+$ git commit -m"sample run of git commands"
+[master 57fc9bd] sample run of git commands
+ 1 file changed, 18 insertions(+)
+
+ $ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ git push -u origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 853 bytes | 426.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Dakota808/Dakota808.github.io.git
+   f7f358a..57fc9bd  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ```
