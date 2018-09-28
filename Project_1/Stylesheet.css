@@ -12,6 +12,15 @@ body{
     margin-right: 20px; 
 }
 
+.wallpaper3{
+    background-image: url("Owari_no_seraph_wallpaper_2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 1500px;
+    
+}
+
 .wallpaper2{
     background-image: url("Gundam-1.jpg");
     background-repeat: no-repeat;
@@ -26,14 +35,17 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 1400px;
+    background-size: 1498px;
     
 }
 .nav-item{
     padding: 10px;
 }
 .list{
-    background-color: rgba(77, 192, 201, 0.726);
+    background-color: rgba(193, 201, 77, 0.575);
+}
+.links{
+    background-color: rgba(193, 201, 77, 0.575);
 }
 .container{
     background-color: lightblue ;
@@ -59,9 +71,14 @@ h2{
 text-align: center;
 }
 .note{
+    background-color: rgba(193, 201, 77, 0.575);
     color: indigo; 
 }
 
-title{
+.highlight{
+    background-color: rgba(193, 201, 77, 0.575)
+}
+
+head{
     color: gold
 }
