@@ -1,10 +1,11 @@
 
 # Homework #1 <br/> 
 Html, Bootstrap, CSS, GIT<br/>
+
 Here are links to my Repsoitory and my demo of my html pages:
 
-[Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1)
-[Demo](https://dakota808.github.io/Project_1/index.html)
+[Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1)<br/>
+[Demo](https://dakota808.github.io/Project_1/index.html)<br/>
 [Main Page](https://dakota808.github.io/)
 
 
