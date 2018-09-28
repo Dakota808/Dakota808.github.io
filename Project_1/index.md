@@ -1,5 +1,5 @@
 
-Title: Homework #1 Html, Bootstrap, CSS, GIT
+Title: Homework #1 Html, Bootstrap, CSS, GIT<br/>
 Here are links to my Repsoitory and my demo of my html pages:
 
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1)
