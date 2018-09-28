@@ -1,5 +1,6 @@
 
-Title: Homework #1 Html, Bootstrap, CSS, GIT<br/>
+#Homework #1 
+Html, Bootstrap, CSS, GIT<br/>
 Here are links to my Repsoitory and my demo of my html pages:
 
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1)
@@ -7,7 +8,7 @@ Here are links to my Repsoitory and my demo of my html pages:
 [Main Page](https://dakota808.github.io/)
 
 
-Git commands:
+##Git commands:
 The git commands are the basic tools in order to link a repository between github or bitbucket so these tools are the most crucial parts to setup. 
 
 1. Build the respoitory in your github or bitbucket. Then install git bash if you did not have already installed.
@@ -18,20 +19,25 @@ So in the first step you are mostly setting up your repository you will also nee
 
 Note: make sure you are in the designated folder you want your repository to link into. If you did not make a folder then build one and link that folder to that location.
 
-git remote add -url:
+### git remote add -url:
 This is specifcally the command to create remote repository between your local machine and the online repository in either github or bitbucket.
 
-git init: initsalizes the git command functions.
+### git init: initsalizes the git command functions.
 Note: you only have to initalize the git once!
 
-git status: checks if any files have been modified.
+### git status: checks if any files have been modified.
 
-git add: initalizes the files to be in a commit stage.
+### git add: initalizes the files to be in a commit stage.
 Note: all == add all files as well as "."
 
-git commit -m: is where you will commit the files to be loaded into the repsoitory. Note: -m is just asking you to write a comment about this commit stay consistent with your ("").
+### git commit -m: 
+Is where you will commit the files to be loaded into the repsoitory. Note: -m is just asking you to write a comment about this commit stay consistent with your ("").
 
-git push -u: you are pushing the files you have commited into your local repository and -u is traking it. note the first you do this it will be using the (origin master), which is the origin of the repository link 
+### git push -u: 
+You are pushing the files you have commited into your local repository and -u is traking it. note the first you do this it will be using the (origin master), which is the origin of the repository link 
+
+### git log:
+This displays all of the commits made to the repository.
 
 ``` bash
 cd desktop/CS_460
@@ -78,7 +84,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ```
 
-Build the Webpages:
+3. Build the Webpages:
 
 Building a basic webpage is simple once you get the general basics of html. As well as how to add and apply a css style sheet. But I think the difficult part has to be how to setup the bootstrap and css.
 
