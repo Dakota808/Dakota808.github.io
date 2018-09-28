@@ -140,8 +140,124 @@ Ex1.
 ```
 Ex2.
 
-This is my 
+This is my setup for the nav bar as well how far each link is from each other. As well as the background color of the nav bar.
 
 ``` css
+nav{
+    background-color: white;
+}
+.nav-item{
+    padding: 10px;
+}
+```
 
+Then when adding a images I noticed that when two images a placed on the same html link they tend to overlap one another. so the work around for this was adding <div> to each specific image and making sure that those images are using a border where they will not crossover one another. 
+
+``` html 
+   <!--This is my usage of images and adjusting the positions-->
+    <!--the image so that when -->
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="container">
+                <div class="anime">
+                    <img src="Servamp.png" alt="Servamp Anime" style="width:700px;height:400px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <div class="container">
+                    <div class="anime">
+                    <img src="Owari_no_seraph_wallpaper.jpg" alt="Servamp Anime" style="width:700px;height:400px;">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+``` 
+
+Finally building the list and table they are simple in nature of what I wanted to use them for. If you want to learn more on how to use these here are some simple links to show how to write them in html. As well as adding in links to differnet sites as well.
+Have fun! 
+[Tables](https://www.w3schools.com/html/html_tables.asp)
+[List](https://www.w3schools.com/html/html_lists.asp)
+[Links](https://www.w3schools.com/html/html_links.asp)
+
+Ex. Tables
+```html
+<!--This a table desgined to show a list Music groups-->
+        <div class="border">
+            <table class="Artist">
+            <tr>
+                <th>Band</th>
+                <th>Origin</th>
+                <th>Genres</th>
+                
+            </tr>
+            <tr>
+                <td>One ok Rock</td>
+                <td>Tokyo, Japan (2005)</td>
+                <td>Post-Hardcore</td>
+            </tr>
+            <tr>
+                <td>Uverworld</td>
+                <td>Kusatsu, Shiga Prefecture, Japan (2000)</td>
+                <td>Pop Rock</td>
+            </tr>
+            <tr>
+                <td>Spyair</td>
+                <td>Nagoya, Aichi Prefecture, Japan (2005)</td>
+                <td>Alternative Rock</td>
+            </tr>
+            <tr>
+                <td>My First Story</td>
+                <td>Shibuya, Tokyo, Japan (2011)</td>
+                <td>Alternative Rock</td>
+            </tr>
+            </table>
+        </div>
+```
+Ex. Unorder List/Links
+```html
+ <nav class="navbar navbar-expand sites"> 
+            <div class="links">
+                <ul class="nav-tabs"> 
+                    <li class="nav-item">
+                        <a href="https://www.last.fm/tag/j-rock/artists">last.fm</a>
+
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="http://www.youtube.com">Youtube</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-Link"  href="https://www.ranker.com/list/japanese-rock-bands-and-artists/reference">download</a>
+                     </li>
+                </ul>
+            </div>
+        </nav>
+```
+Ex. Order List
+```html
+<div class="list">
+            <p>
+                <br>Here is a list of anime that I would recommend people<br>
+                    to watch. This is my top ten Animes to watch.<br>
+            </p>
+           <div class="showlist"> 
+               <ol>
+                <li>Gundam 00</li>
+                <li>Mahouka Koukou no Rettousei</li>
+                <li>Gundam Build Divers</li>
+                <li>Miira no Kaikata</li>
+                <li>Gamers!</li>
+                <li>Arpeggio of Blue Steel</li>
+                <li>Infinite Stratos</li>
+                <li>Mahoutsukai no Yome</li>
+                <li>Gundam Build Try</li>
+                <li>Gakuen Babysitter</li>
+                </ol>
+            </div>
+        </div>
 ```
