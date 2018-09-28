@@ -114,3 +114,34 @@ The big issue is trying to set the navbar up in my html it would either look rea
 
 Bootstrap is just a way to make your html file look better by adding different styles and formats to different pieces inside of the html. However, we can honestly make our own style sheet by using a css file to link to the html file.
 
+``` html
+    <!---This is basic Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--My version of Bootstap-->
+    <link rel="stylesheet" href="Stylesheet.css">
+```
+
+Note: that this is done while the css file is located in the same folder as the html for my version of a css style sheet while bootstraps is the default type and you can add styles into the html file directly.
+
+Building a CSS
+So when you build the css file note that this is a way customize your html page from background colors to how your text looks even perhaps you want to sent an image as your background.
+
+Ex1.
+
+``` css
+.music{
+    background-image: url("Owari_no_seraph_wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 1550px;
+    
+}
+```
+Ex2.
+
+This is my 
+
+``` css
+
+```
