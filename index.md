@@ -8,3 +8,4 @@ My name is Dakota Koki I am a computer science major. Reason for this is to disp
 
 ### Projetcs
 Here is where all of the projects are located:
+[Homework #1](index.md)
