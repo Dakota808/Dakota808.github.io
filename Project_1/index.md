@@ -33,7 +33,7 @@ git commit -m: is where you will commit the files to be loaded into the repsoito
 
 git push -u: you are pushing the files you have commited into your local repository and -u is traking it. note the first you do this it will be using the (origin master), which is the origin of the repository link 
 
-```bash
+``` bash
 cd desktop/CS_460
 mkdir Dakota808.github.io
 git init
@@ -41,7 +41,7 @@ git remote add https://github.com/Dakota808/Dakota808.github.io.git
 ```
 Here is an example of the git commit, status, add, and push:
 
-```bash
+``` bash
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -77,3 +77,40 @@ To https://github.com/Dakota808/Dakota808.github.io.git
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ```
+
+Build the Webpages:
+
+Building a basic webpage is simple once you get the general basics of html. As well as how to add and apply a css style sheet. But I think the difficult part has to be how to setup the bootstrap and css.
+
+The big issue is trying to set the navbar up in my html it would either look really odd where the links would stack on top of each other for some reason. But once I solved it for one page the rest were basically the same way. So my thought of this was just make a div to hows all of the different links and use a unorder list. However, that is not the case in fact you have to set the type of links inside of the "<nav>" config where each of the different links are going to be held so that they will line up instead of being stacked on each other. This is the same process for the other webpages.
+
+``` html
+
+<body>
+        <nav class="navbar navbar-expand">  
+            <div class="container-fluid space">
+                <ul class="nav nav-tabs">                
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a href="AnimeList.html">Anime</a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-Link"  href="J-Music.html">J-Music</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </nav> 
+    </body>
+
+
+```
+
+Bootstrap is just a way to make your html file look better by adding different styles and formats to different pieces inside of the html. However, we can honestly make our own style sheet by using a css file to link to the html file.
+
