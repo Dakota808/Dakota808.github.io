@@ -12,4 +12,4 @@ Here is a link to local repository on github.
 
 ### Projects
 Here is where all of the projects are located:
-[Homework #1](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_1/index.md)
+[Homework #1](Project_1/index.md)
