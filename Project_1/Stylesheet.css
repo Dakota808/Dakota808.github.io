@@ -12,15 +12,23 @@ body{
     margin-right: 20px; 
 }
 
-.music{
-    background-image: url("Owari_no_seraph_wallpaper.jpg");
+.wallpaper2{
+    background-image: url("Gundam-1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 1550px;
+    background-size: 1480px;
     
 }
 
+.wallpaper{
+    background-image: url("Servamp_2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 1400px;
+    
+}
 .nav-item{
     padding: 10px;
 }
@@ -52,4 +60,8 @@ text-align: center;
 }
 .note{
     color: indigo; 
+}
+
+title{
+    color: gold
 }
