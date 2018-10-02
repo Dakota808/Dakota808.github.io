@@ -5,3 +5,20 @@
 .display{
     background-color: rgba(210, 180, 140, 0.623);
 }
+
+.order_list{
+    background-color: whitesmoke;
+    box-align: right;
+}
+table, th, td{
+    border: 3px solid black;
+
+}
+th, td{
+    padding: 15px
+
+}
+table{
+    box-align: right;
+    border-spacing: 5px 
+}
