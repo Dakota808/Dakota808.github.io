@@ -22,3 +22,7 @@ table{
     box-align: right;
     border-spacing: 5px 
 }
+
+h1, h2, p{
+    text-align: center;
+}
