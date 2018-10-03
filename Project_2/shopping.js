@@ -1,21 +1,15 @@
-var item1;
-var item2;
-var item3;
-var quanity;
-var x;
+var item1 = $("#item1").val();
+var item2 = $("#item2").val();
+var item3 = $("#item3").val();
 
+
+var itemOne = 3.50
+var itemTwo = 7.99
+var itemThree = 8.99
 function calculation(){
-    if(x = item1){
-        x = item1 * quanity;
-        return x;
-    }else if (x = item2){
-        x = item2 * quanity;
-        return x;
-    }else if (x = item3){
-        x =item3 * quanity;
-        return x;
-    }else{
-        return "please input how many you are trying to purchase."
-    }
-   
+   var subtotal = item1 * itemOne;
+   var subtotal = item2 * itemTwo;
+   var subtotal = item3 * itemThree;
+   console.log("sub total = " + subtotal);
 }
+calculation();
