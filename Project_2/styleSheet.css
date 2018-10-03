@@ -7,8 +7,9 @@
 }
 
 .order_list{
+    box-direction: right;
     background-color: whitesmoke;
-    box-align: right;
+    
 }
 table, th, td{
     border: 3px solid black;
@@ -19,7 +20,7 @@ th, td{
 
 }
 table{
-    box-align: right;
+    box-align: center;
     border-spacing: 5px 
 }
 
