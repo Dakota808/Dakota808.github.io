@@ -2,6 +2,28 @@
     background-color: aqua;
 }
 
-body{
+.display{
     background-color: rgba(210, 180, 140, 0.623);
+}
+
+.order_list{
+    box-direction: right;
+    background-color: whitesmoke;
+    
+}
+table, th, td{
+    border: 3px solid black;
+
+}
+th, td{
+    padding: 15px
+
+}
+table{
+    box-align: center;
+    border-spacing: 5px 
+}
+
+h1, h2, p{
+    text-align: center;
 }

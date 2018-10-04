@@ -16,14 +16,62 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!---This is basic Bootstrap-->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <!--My personal style sheet-->
+        <link rel="stylesheet" href="styleSheet.css">
     </head>
 
-    <!---This is basic Bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--My personal style sheet-->
-    <link rel="stylesheet" href="styleSheet.css">
+
     <body class="display">
+    <div class="container">    
+        <div class="row">
+            <div class="col-md-2">
+                <div class="item-List">
+                    <div class="item">
+                        <ul>
+                            <li>
+                                Item #1
+                                <input type="number" placeholder ="Quanity" class="button" id="item1">
+                                <button type="submit" id="button1" onclick="calculation(); return false">Buy</button>
+                            <li>
+                                Item #2
+                                <input type="number" placeholder ="Quanity" class="button" id="item2">
+                                <button type="submit" id="button2" onclick="calculation2(); return false">Buy</button>
+                            </li>
+                            <li>
+                                Item #3
+                                <input type="number" placeholder ="Quanity" class="button" id="item3">
+                                <button type="submit" id="button2" onclick="calculation3(); return false;">Buy</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!--This table holds all current items being bought from user.-->
+        <!--This will update depending if the users changes his order.-->
+            <div class="col-md-10">
+                <div class="order_list">
+                    <table style="100%" class="float-right">
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quanity</th>
+                            <th id="test">Sub Total</th>
+                            <tbody id="tableIn">
+
+                            </tbody>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="shopping.js" ></script>
+
     </body>
 
 </html>
