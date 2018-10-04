@@ -33,14 +33,16 @@
                             <li>
                                 Item #1
                                 <input type="number" placeholder ="Quanity" class="button" id="item1">
-                            </li>
+                                <button type="submit" id="button1" onclick="calculation(); return false">Buy</button>
                             <li>
                                 Item #2
                                 <input type="number" placeholder ="Quanity" class="button" id="item2">
+                                <button type="submit" id="button2" onclick="calculation2(); return false">Buy</button>
                             </li>
                             <li>
                                 Item #3
                                 <input type="number" placeholder ="Quanity" class="button" id="item3">
+                                <button type="submit" id="button2" onclick="calculation3(); return false;">Buy</button>
                             </li>
 
                         </ul>
@@ -56,7 +58,10 @@
                             <th>Item</th>
                             <th>Price</th>
                             <th>Quanity</th>
-                            <th>Sub_total</th>
+                            <th id="test">Sub Total</th>
+                            <tbody id="tableIn">
+
+                            </tbody>
                         </tr>
                     </table>
                 </div>
