@@ -2,6 +2,7 @@
 ## CS 460 Software Engineering 
 
 This is my protfolio of my senior project
+![]("Dakota Koki.JPG")
 
 ### Profile
 
