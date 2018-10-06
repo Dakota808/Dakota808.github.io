@@ -14,3 +14,4 @@ Here is a link to local repository on github.
 ### Projects
 Here is where all of the projects are located:
 [Homework #1](Project_1/HW1post.md)
+[Homework #2](Project_2/HW2blog.md)
