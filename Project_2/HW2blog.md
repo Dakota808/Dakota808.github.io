@@ -17,17 +17,8 @@ This was no single simple task to do when I first was deciding on a project for 
 <p>
 This process takes sometime to process in fact the design for it is much more simple. What it is basic inputs of integer type inputs which specifically prevent any string type inputs. From there we must build a event action handler to make sure that any input when exectued is sent to the javascript to then execute a simple calculation. This simple calculation which like most online shopping sties contain a static variable which is the price of the item, as well as the quanity of that particular item.</p> 
 
-## Javascript and Jquery
-<p>
-
-This next part is quite simple as well which is the functions of the calculation and the setup of the Jquery. Lets first look at how to setup the query. There are two options that can be done to enable jquery, one is to download the file containing the jquery and then link that to the html page. This would be more reason able for many reasons. Or the alternative option in which you take the query and remote access those files. I chose to take the second and linked my html with an online link of the jquery. 
-
-</p>
-
-<p>
-This code is using an id to indicate the action that needs to be taken when someone inputs a variable.
-As well as using a button to make it an execuition. However, when you look at the on click which is the action that I take to build the table in a later discussion. However, the reason for the return false is to make sure that none of my data is going to be erased from previous actions that were taken, otherwise if that was not there it would wipeout all of the data that I had enplaced.  
-</p>
+## HTML Design
+Here is the desgin of the html file which will hold a event handler to wait for the calculation to take action.
 
 ``` html
 <div class="row">
@@ -68,6 +59,19 @@ Here is the one I used for this project:<br>
 
 This whole design is used in simple of fucntions designed in javascript which in my thoughts is similar to Python.<br>
 This is where all of the calculations are done or rather the actions are taking place.<br>
+
+## Javascript and Jquery
+<p>
+
+This next part is quite simple as well which is the functions of the calculation and the setup of the Jquery. Lets first look at how to setup the query. There are two options that can be done to enable jquery, one is to download the file containing the jquery and then link that to the html page. This would be more reason able for many reasons. Or the alternative option in which you take the query and remote access those files. I chose to take the second and linked my html with an online link of the jquery. 
+
+</p>
+
+<p>
+This code is using an id to indicate the action that needs to be taken when someone inputs a variable.
+As well as using a button to make it an execuition. However, when you look at the on click which is the action that I take to build the table in a later discussion. However, the reason for the return false is to make sure that none of my data is going to be erased from previous actions that were taken, otherwise if that was not there it would wipeout all of the data that I had enplaced.  
+</p>
+
 
 ``` javascript
 function calculation(){
