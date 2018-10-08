@@ -2,7 +2,7 @@
 ## CS 460 Software Engineering 
 
 This is my protfolio of my senior project
-![Professional Photo]("Dakota808.github.io/Dakota_Koki.JPG")
+![Professional Photo]("Dakota_Koki.JPG")
 
 ### Profile
 
