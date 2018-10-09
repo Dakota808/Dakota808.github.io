@@ -14,10 +14,16 @@ Which is using both Javascript and Jquery in a html file.<br>
 <p>
 This was no single simple task to do when I first was deciding on a project for this assignment. I had to think of the what I wanted to showcase the use of a calculation and design for it. So my thought was to build a clone of a amazon or ebay website.</p> <br>
 
+## Html Page Design
+![Image](html_design.jpg)
+
+## Javascript design
+![Image](javascript_design.jpg)
+
 <p>
 This process takes sometime to process in fact the design for it is much more simple. What it is basic inputs of integer type inputs which specifically prevent any string type inputs. From there we must build a event action handler to make sure that any input when exectued is sent to the javascript to then execute a simple calculation. This simple calculation which like most online shopping sties contain a static variable which is the price of the item, as well as the quanity of that particular item.</p> 
 
-## HTML Design
+## HTML Code Design
 Here is the desgin of the html file which will hold a event handler to wait for the calculation to take action.
 
 ``` html
