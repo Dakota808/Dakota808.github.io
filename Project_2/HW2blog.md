@@ -18,7 +18,7 @@ This was no single simple task to do when I first was deciding on a project for 
 ![Image](html_design.jpg)
 
 ## Javascript design
-![Image](javascript_design.jpg)
+![Image1](Javascript_design.jpg)
 
 <p>
 This process takes sometime to process in fact the design for it is much more simple. What it is basic inputs of integer type inputs which specifically prevent any string type inputs. From there we must build a event action handler to make sure that any input when exectued is sent to the javascript to then execute a simple calculation. This simple calculation which like most online shopping sties contain a static variable which is the price of the item, as well as the quanity of that particular item.</p> 
