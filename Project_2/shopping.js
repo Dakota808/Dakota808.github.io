@@ -30,3 +30,9 @@ function calculation3(){
     $('#tableIn').append( "<tr><td>Item #3</td><td>$8.99</td><td>"+item3+"</td><td>$"+subtotal+"</td></tr>");
     console.log(subtotal);
 }
+
+function clearAll(){
+    $('input').replaceWith('<input type="number" placeholder ="Quanity" class="button" id="item1">')
+}
+
+

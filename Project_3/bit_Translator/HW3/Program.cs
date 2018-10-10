@@ -73,7 +73,53 @@ namespace HW3
 
         }
 
-        public class LinkedQueue : IQueueInterface<T> {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public class LinkedQueue<T> : IQueueInterface<T> {
+            private Node<T> front;
+            private Node<T> rear;
+
+            public LinkedQueue()
+            {
+                front = null;
+                rear = null;
+            }
+            /// <summary>
+            /// This is where if a element type returning a null value it will throw a exception 
+            /// which is similar to NullPointerException from java,
+            /// This considered the NullReferenceException.
+            /// </summary>
+            /// <param name="element"></param>
+            /// <returns></returns>
+            public T Push(T element)
+            {
+                if (element == null)
+                {
+                    throw new NullReferenceException();
+                }
+
+                if (IsEmpty())
+                {
+                    Node<T> temp = new Node<T>()
+                }
+
+                return element;
+            }
+
+
+            public T Pop(T element)
+            {
+                throw new NotImplementedException();
+            }
+
+
+            public bool IsEmpty()
+            {
+                throw new NotImplementedException();
+            }
+
 
 
         }
