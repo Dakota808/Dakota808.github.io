@@ -7,163 +7,14 @@ using System.Threading.Tasks;
 
 namespace HW3
 {
-    class Node<T>
-    {
-        /// <summary>
-        /// This is in initalizing the the files data points in the nodes
-        /// </summary>
-        public T Data;
-        public Node<T> Next;
-
-        public Node(T data, Node<T> next)
-        {
-            ///This is the moving the pointer of the node 
-            ///to the next node in the data.
-            this.Data = data;
-            this.Next = next;
-        }
-    }
-
-    interface IQueueInterface<T> {
-            /// <summary>
-            /// This is holidng all the elements and then from there it will add
-            /// the elements to the query. This will place that element to the end
-            /// of the query.
-            /// </summary>
-            /// <param name="element"></param>
-            /// <returns></returns>
-            T Push(T element);
-
-            /// <summary>
-            /// This will take the top element from the top of the stack
-            /// Then will then return that element.
-            /// </summary>
-            /// <returns></returns>
-            T Pop();
-
-            /// <summary>
-            /// This is to check and see if the queue is empty.
-            /// This will return false if the queue is populated,
-            /// otherwise this will return true. 
-            /// </summary>
-            /// <returns></returns>
-            bool IsEmpty();
-
-        }
-
-        /// <summary>
-        /// This is using the idea of running a test to check for 
-        /// any operations that were executed/performed to a empty queue. 
-        /// </summary>
-        public class QueueUnderflowException : Exception
-        {
-            public QueueUnderflowException()
-            {
-
-            }
-            /// <summary>
-            /// This will return a string message that will 
-            /// inform a illegal operation that is performed in the program.
-            /// </summary>
-            /// <param name="message"></param>
-            public QueueUnderflowException(string message) : base(message) {
 
 
+    
 
-            }
-
-        }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public class LinkedQueue<T> : IQueueInterface<T>
-        {
-            private Node<T> front;
-            private Node<T> rear;
-
-            public LinkedQueue()
-            {
-                front = null;
-                rear = null;
-            }
-            /// <summary>
-            /// This is where if a element type returning a null value it will throw a exception 
-            /// which is similar to NullPointerException from java,
-            /// This considered the NullReferenceException.
-            /// </summary>
-            /// <param name="element"></param>
-            /// <returns></returns>
-            public T Push(T element)
-            {
-                if (element == null)
-                {
-                    throw new NullReferenceException();
-                }
-
-                if (IsEmpty())
-                {
-                    Node<T> temp = new Node<T>(element, null);
-                    rear = front = temp;
-
-                }
-                else
-                {
-                    Node<T> temp = new Node<T>(element, null);
-                    rear.Next = temp;
-                    rear = temp;
-                }
-
-                return element;
-            }
-
-            /// <summary>
-            /// This is desgined to pull out the elements from the queue and removes it.
-            /// </summary>
-            /// <param name="element"></param>
-            /// <returns></returns>
-            public T Pop()
-            {
-                T temp = default(T);
-
-                if (IsEmpty())
-                {
-                    throw new QueueUnderflowException("The Queue is empty when pop is invoked ");
-                }
-                else if (front == rear)
-                {
-                    /// This is when one item is in the Queue
-                    temp = front.Data;
-                    front = null;
-                    rear = null;
-                }
-                else
-                {
-                    /// This is all of the general cases
-                    temp = front.Data;
-                    front = front.Next;
-
-                }
-                return temp;
-            }
+        
 
 
-            public bool IsEmpty()
-            {
-                if (front == null && rear == null)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
-
-
-        }
+        
 
      /// <summary>
      /// This will print the binary repesentation of all numbers from 1 up to n
@@ -250,7 +101,7 @@ namespace HW3
             {
                 for (int i = 0; i < maxLength - s.Length; i++)
                 {
-                    Console.WriteLine(" ");
+                    Console.Write(" ");
                 }
                 Console.WriteLine(s);
             }
