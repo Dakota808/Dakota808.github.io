@@ -20,6 +20,7 @@ We are to write C# code and be able to translate Java code as well. We were to r
 ## Java Code
 This section we will be looking into the Java code and breif detail of how they function.<br>
 Here's what we are looking into:<br>
+```html
 <ul>
     Node.java
     QueueInterface.java
@@ -27,13 +28,14 @@ Here's what we are looking into:<br>
     LinkedQueue.java
     Main.java
 </ul>
+```
 
 ### Node.java <br>
 <p>
-Within the Node class from java is simple and easy to understand the what this does is simple intalize the node pointer which will hold type ```Java <T>```,which many would wonder what does ```Java <T>```mean well that is simple to explain but we need to also note that the C# will also use the value type in there function. 
+Within the Node class from java is simple and easy to understand the what this does is simple intalize the node pointer which will hold type ,which many would wonder what does mean well that is simple to explain but we need to also note that the C# will also use the value type in there function. 
 </p>
 <p>
-So ```Java <T>```is a class type which in this case can hold class type objects such as strings, integers, or object types. From this case we use the nodes as pointers to integers. 
+So (T) is a class type which in this case can hold class type objects such as strings, integers, or object types. From this case we use the nodes as pointers to integers. 
 </p>
 
 
