@@ -11,12 +11,14 @@ Here are the links to the this assignment:<br>
 [Main Page](https://dakota808.github.io/)<br>
 
 ## Objective
-We are to write C# code and be able to translate Java code as well. We were to refactor java code designed to make a binary tree which will take a input and interate through the process until they have met the input value so for example:
+We are to write C# code and be able to translate Java code as well. We were to refactor java code designed to make a binary tree which will take a input and interate through the process until they have met the input value so for example:<br>
+```C#
              1
          /       \
         10       11
        /  \     /  \
      100  101 110  111
+```
 ## Java Code
 This section we will be looking into the Java code and breif detail of how they function.<br>
 Here's what we are looking into:<br>
@@ -32,7 +34,7 @@ Here's what we are looking into:<br>
 
 ### Node.java <br>
 <p>
-Within the Node class from java is simple and easy to understand the what this does is simple intalize the node pointer which will hold type ,which many would wonder what does mean well that is simple to explain but we need to also note that the C# will also use the value type in there function. 
+ The Node class from java is simple and easy to understand. But does (T) in the class header mean?Simple it intalizes the node pointer which will hold type.
 </p>
 <p>
 So (T) is a class type which in this case can hold class type objects such as strings, integers, or object types. From this case we use the nodes as pointers to integers. 
