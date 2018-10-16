@@ -7,7 +7,6 @@
 
 Here are the links to the this assignment:<br>
 [Repsoitory](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_3/bit_Translator/HW3)<br>
-[Demo]<br>
 [Main Page](https://dakota808.github.io/)<br>
 
 ## Objective
@@ -31,7 +30,11 @@ Here's what we are looking into:<br>
     Main.java
 </ul>
 ```
-
+### Installing Visual Studio
+<p>So installing the Visual studio code is not that hard however to setup the enviorment is know what you will need add on to work on certain things. For this case we need to run all functions of C# and web services such as MVC and ASPI. These can all be found when you first setup the Visual Studio which will ask you what types of features do you want to run.</p>
+Setup is simple here's how:<br>
+1.Download [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+<p></p>
 ### Node.java <br>
 <p>
  The Node class from java is simple and easy to understand. But does (T) in the class header mean?Simple it intalizes the node pointer which will hold type.
@@ -89,6 +92,12 @@ namespace HW3
 ```
 Note: that in this display the code is in a what they call a namespace. This is the way visual studio is designed, it will hold all of the different class and it's functions inside a name space which C# uses the most and so you can consider the namspace as like a workbench or a folder which holds all of the work progress that you have done. 
 
-### 
+### QueueUnderflowExecption
+
+<p>When we look into how to handle exceptions in java is not the same as in C#. In fact one of the key things to note about them is that the excpeitons are handle outside of the class instead if a function just having to direct connection to the exception. So when I built the exception for this part I had no throw exceptions inside the body of the class or in the function. All of them were handle outside of this.</p>
+
+
+
+##Demo
 
 
