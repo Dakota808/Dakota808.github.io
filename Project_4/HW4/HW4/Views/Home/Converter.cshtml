@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Converter";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Input your miles here:</p>
+<div class="row">
+
+        <form action="">
+            <div class="col-md-6 form-group">
+                <label for="input">Miles:</label>
+                <input type="number" class="layout-form" id="input" placeholder="Type your distance" required />
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metric-unit" id="mile-input" value="millimeters"/>
+                    <label class="form-check-label" for="u1">Millimeters</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metric-unit" id="mile-input" value="centimeters"/>
+                    <label class="form-check-label" for="u2">Centimeters</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metric-unit" id="mile-input" value="meters"/>
+                    <label class="form-check-label" for="u3">Meters</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metric-unit" id="mile-input" value="kilometers"/>
+                    <label class="form-check-label" for="u4">Kilometers</label>
+                </div>
+            </div>
+        </form>
+    
+
+
+</div>
