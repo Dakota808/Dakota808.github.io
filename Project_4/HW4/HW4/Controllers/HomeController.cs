@@ -47,7 +47,7 @@ namespace HW4.Controllers
                     break;
             }
 
-            string message = "Conversion: " + Convert.ToString(result) + " " + mearsurement;
+            string message = "Conversion: " + Convert.ToString(result) + " "+ mearsurement;
             ViewBag.Message = message;
 
 
@@ -60,7 +60,6 @@ namespace HW4.Controllers
 
             return View();
         }
-
       
         public ActionResult Result()
         {
