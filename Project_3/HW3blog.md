@@ -236,7 +236,292 @@ namespace HW3
 }
 ```
 ### LinkedQueue
-The most important part to this particular part of this assignment is how to handle the null pointer exceptions. Which in C# reference is not the same as java's. The way they handle null pointers is by Null Reference Excepiton 
-## Demo
+The most important part to this particular part of this assignment is how to handle the null pointer exceptions. Which in C# reference is not the same as java's. The way they handle null pointers is by Null Reference Excepiton. The rest of the code is the similar to the Java code.
+
+### Java Code
+``` Java
+public T push(T element)
+	{ 
+		if( element == null )
+		{
+			throw new NullPointerException();
+		}
+		
+		if( isEmpty() )
+		{
+			Node<T> tmp = new Node<T>( element, null );
+			rear = front = tmp;
+		}
+		else
+		{		
+			// General case
+			Node<T> tmp = new Node<T>( element, null );
+			rear.next = tmp;
+			rear = tmp;
+        }
+        return element;
+	}     
+```
+Push use the NullPointerException<br>
+
+### C# Code
+```C#
+        /// <summary>
+        /// This is where if a element type returning a null value it will throw a exception 
+        /// which is similar to NullPointerException from java,
+        /// This considered the NullReferenceException.
+        /// </summary>
+        /// <param name="element"></param>
+        /// <returns></returns>
+        public T Push(T element)
+        {
+            if (element == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            if (IsEmpty())
+            {
+                Node<T> temp = new Node<T>(element, null);
+                rear = front = temp;
+
+            }
+            else
+            {
+                Node<T> temp = new Node<T>(element, null);
+                rear.Next = temp;
+                rear = temp;
+            }
+
+            return element;
+        }
+```
+
+<p>After you have done these four classes the code is basiclly runing the main as always but instead of ("System.out.println") we are using ("WriteLine") to print the result in the program.</p>
+
+### Java Code
+```Java
+/**
+ * Original by Sumit Ghosh "An Interesting Method to Generate Binary Numbers from 1 to n"
+ * at https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/
+ * 
+ * Adapted for CS 460 HW3.  This simple example demonstrates the rather powerful
+ * application of Breadth-First Search to enumeration of states problems.
+ * 
+ * There are easier ways to generate a list of binary values, but this technique
+ * is very general and a good one to remember for other uses.
+ */
+
+import java.util.LinkedList; 
+
+public class Main  
+{ 
+    /**
+     * Print the binary representation of all numbers from 1 up to n.
+     * This is accomplished by using a FIFO queue to perform a level 
+     * order (i.e. BFS) traversal of a virtual binary tree that 
+     * looks like this:
+     *                 1
+     *             /       \
+     *            10       11
+     *           /  \     /  \
+     *         100  101  110  111
+     *          etc.
+     * and then storing each "value" in a list as it is "visited".
+     */
+    static LinkedList<String> generateBinaryRepresentationList(int n) 
+    { 
+        // Create an empty queue of strings with which to perform the traversal
+        LinkedQueue<StringBuilder> q = new LinkedQueue<StringBuilder>(); 
+
+        // A list for returning the binary values
+        LinkedList<String> output = new LinkedList<String>();
+        
+        if(n < 1)
+        {
+            // binary representation of negative values is not supported
+            // return an empty list
+            return output;
+        }
+          
+        // Enqueue the first binary number.  Use a dynamic string to avoid string concat
+        q.push(new StringBuilder("1")); 
+          
+        // BFS 
+        while(n-- > 0) 
+        { 
+            // print the front of queue 
+            StringBuilder sb = q.pop(); 
+            output.add(sb.toString()); 
+            
+            // Make a copy
+            StringBuilder sbc = new StringBuilder(sb.toString());
+
+            // Left child
+            sb.append('0');
+            q.push(sb);
+            // Right child
+            sbc.append('1');
+            q.push(sbc); 
+        }
+        return output;
+    } 
+      
+    // Driver program to test above function 
+    public static void main(String[] args)  
+    { 
+        int n = 10;
+        if(args.length < 1)
+        {
+            System.out.println("Please invoke with the max value to print binary up to, like this:");
+            System.out.println("\tjava Main 12");
+            return;
+        }
+        try 
+        {
+            n = Integer.parseInt(args[0]);
+        } 
+        catch (NumberFormatException e) 
+        {
+            System.out.println("I'm sorry, I can't understand the number: " + args[0]);
+            return;
+        }
+        LinkedList<String> output = generateBinaryRepresentationList(n);
+        // Print it right justified.  Longest string is the last one.
+        // Print enough spaces to move it over the correct distance
+        int maxLength = output.getLast().length();
+        for(String s : output)
+        {
+            for(int i = 0; i < maxLength - s.length(); ++i)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(s);
+        }
+    } 
+} 
+
+```
+### C# Code
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace HW3
+{
+
+
+    
+
+        
+
+
+        
+
+     /// <summary>
+     /// This will print the binary repesentation of all numbers from 1 up to n
+     /// By doing this it will design a virtual binary tree that will perform
+     /// a level order traversal using the FIFO queue. 
+     /// Result should be like this:
+     ///        1
+     ///    /       \
+     ///   10       11
+     ///  /  \     /  \
+     ///100  101 110  111
+     ///
+     /// etc.
+     /// which will store each value that was visited in the list.
+     /// </summary>
+        public class MainRun
+        {
+            static LinkedList<string> generateBinaryRepList(int n)
+            {
+                ///Creates an empty queue of strings
+                LinkedQueue<StringBuilder> x = new LinkedQueue<StringBuilder>();
+                ///The list is returning the binary values
+                LinkedList<string> output = new LinkedList<string>();
+
+                if (n < 1)
+                {
+                    /// binary values and representation do not support negative values
+                    /// return an empty list
+                    return output;
+                }
+
+                ///This will add the first binary number. This uses a dynamic string
+                ///to avoid string concat.
+                x.Push(new StringBuilder("1"));
+
+                ///BFS
+                while(n > 0)
+                {
+                    ///print the first part of the queue
+                    StringBuilder sb = x.Pop();
+                    output.AddLast(sb.ToString());
+
+                    ///Make a copy
+                    StringBuilder sbc = new StringBuilder(sb.ToString());
+
+                    ///Left Child
+                    sb.Append("0");
+                    x.Push(sb);
+                    ///Right Child
+                    sbc.Append("1");
+                    x.Push(sbc);
+                    n--;
+
+                }
+            return output;
+
+            }
+        /// <summary>
+        /// This will be the driver and is testing the program.
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            int n = 10;
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Please invoke with the max value to print binary up to, like this:");
+                Console.WriteLine("\t Main 12");
+                return;
+            }
+            try
+            {
+                n = Int32.Parse(args[0]);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("I'm sorry, I can not understand the input: " + args[0]);
+            }
+
+            LinkedList<string> output = generateBinaryRepList(n);
+
+            int maxLength = output.Count();
+            foreach (string s in output)
+            {
+                for (int i = 0; i < maxLength - s.Length; i++)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine(s);
+            }
+        }
+
+    }
+
+
+       
+
+}
+
+
+```
+For more information see the demo for more. 
 
 
