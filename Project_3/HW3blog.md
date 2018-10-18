@@ -236,7 +236,7 @@ namespace HW3
 }
 ```
 ### LinkedQueue
-The most important part to this particular part of this assignment is how to handle the null pointer exceptions. Which in C# reference is not the same as java's. 
+The most important part to this particular part of this assignment is how to handle the null pointer exceptions. Which in C# reference is not the same as java's. The way they handle null pointers is by Null Reference Excepiton 
 ## Demo
 
 
