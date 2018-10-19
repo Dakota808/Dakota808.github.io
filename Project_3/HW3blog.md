@@ -522,6 +522,9 @@ namespace HW3
 
 
 ```
-For more information see the demo for more. 
+Here is the Demo of the Program:
+![Setup Program](intialSetup.jpg)
+![Binary #12](Binary12.jpg)
+![Binary #20](Binary20.jpg)
 
 
