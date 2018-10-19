@@ -522,6 +522,9 @@ namespace HW3
 
 
 ```
-For more information see the demo for more. 
+Here is a Demo of the running program
+![setup program](setup.png)
+![test 1](test1.png)
+![test 2](test2.png)
 
 
