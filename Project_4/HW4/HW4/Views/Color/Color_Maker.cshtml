@@ -22,3 +22,16 @@
     <button type="submit" value="" class="btn btn-primary">Create</button>
 }
 
+@if (ViewBag.show)
+{
+    <br />
+
+    <div class="row">
+        <div class="col-sm-6" style="@ViewBag.shape"></div>
+        <div class="col-sm-6" style="width:50px; height: 75px;"><h2>+</h2></div>
+        <div class="col-sm-6" style="@ViewBag.shape1"></div>
+        <div class="col-sm-6" style="width:50px; height: 75px;"><h2>=</h2></div>
+        <div class="col-sm-6" style="@ViewBag.shape2"></div>
+
+    </div>
+}

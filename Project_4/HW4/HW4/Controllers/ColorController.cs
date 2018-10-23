@@ -88,7 +88,9 @@ namespace HW4.Controllers
             {
                 ViewBag.show = true;
 
-
+                ViewBag.shape = "width:55px; height:55px; border: 1px soild #000; background:" + ColorOne + ";";
+                ViewBag.shape1 = "width:55px; height:55px; border: 1px soild #000; background:" + ColorTwo + ";";
+                ViewBag.shape2 = "width:55px; height:55px; border: 1px soild #000; background:" + mixColor + ";";
 
             }
 
