@@ -522,9 +522,11 @@ namespace HW3
 
 
 ```
-Here is the Demo of the Program:
 ![Setup Program](intialSetup.jpg)
 ![Binary #12](Binary12.jpg)
 ![Binary #20](Binary20.jpg)
+Here is a Demo of the running program
+![test 1](test1.png)
+![test 2](test2.png)
 
 
