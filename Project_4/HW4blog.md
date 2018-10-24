@@ -52,4 +52,49 @@ Here are the links to the this assignment:<br>
 ![convertor](ConverterHtml.jpg)<br>
 ![page](ConverterPage.jpg)<br>
 
-<p>After the we setup the html page for this we are now working in the Controllers which will do all of the calculation. </p>
+<p>After the we setup the html page for this we are now working in the Controllers which will do all of the calculation. so we use the [Httpget] which will allow the code to recevie the inputs from the html page which I built a simple switch case similar to a if else statement that returns the values of doubles which can handle large decimals and whole numbers. I also add a viewbag which will be false until we return the results for the calculation. We also design a simlpe debuger to print the lines into the file to make sure the file is receiving and returning the right inputs.</p>
+
+```CS
+ [HttpGet]
+        public ActionResult Converter()
+        {
+            ViewBag.result = false;
+            double miles = Convert.ToDouble(Request.QueryString["mile"]);
+            string mearsurement = Request.QueryString["metric-unit"];
+            Debug.WriteLine(miles);
+            Debug.WriteLine(mearsurement);
+
+            double result;
+            switch (mearsurement)
+            {
+                case "millimeters":
+                    result = miles * 1609344;
+                    ViewBag.result = true;
+                    break;
+                case "centimeters":
+                    result = miles * 160934.4;
+                    ViewBag.result = true;
+                    break;
+                case "meters":
+                    result = miles * 1609.344;
+                    ViewBag.result = true;
+                    break;
+                case "kilometers":
+                    result = miles * 1.609344;
+                    ViewBag.result = true;
+                    break;
+                default:
+                    result = -1;
+                    break;
+            }
+
+            string message = "Conversion: " + Convert.ToString(result) + " "+ mearsurement;
+            ViewBag.Message = message;
+
+
+            return View();
+        }
+```
+
+### Color Maker
+<p>The color maker is similar to the converter and that we will use a excpetion handling method that will be discussed later.  </p>
