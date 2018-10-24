@@ -5,23 +5,29 @@
 
 <h3>Input the color in hexidecimal format: #eeffdd</h3> <br/>
 
-
+<!--This the setup of the view and how the text fields will be setup for each one will be one color an will return a final color which the mix of the two--->
 @using (Html.BeginForm("Color_Maker", "Color", FormMethod.Post))
-{
+{   <!--This is for  color 1-->
     <div class="form-group">
+        <
         @Html.Label("color1", "Color #1")
+        <!--This uses a specfic pattern between the input that is typed in the text field itself.-->
         @Html.TextBox("Color1", null, htmlAttributes: new { @class = "form-control", pattern ="#[0-9A-Fa-f]{3,6}", type = "text" ,placeholder = "#eeffdd", required = "required"})
     </div>
 
+    <!--This is for color 2-->
     <div class="form-group">
         @Html.Label("color2", "Color #2")
+        <!--This uses a specfic pattern between the input that is typed in the text field itself.-->
         @Html.TextBox("Color2", null, htmlAttributes: new { @class = "form-control", pattern = "#[0-9A-Fa-f]{3,6}", type = "text", placeholder = "#eeffdd", required = "required"})  
     </div>
 
     <br/>
+    <!--This is the submits the two inputs and push out to the post function to dispaly the final color-->
     <button type="submit" value="" class="btn btn-primary">Create</button>
 }
 
+<!--This displays the colors inside of boxes showing the calculation of the two color values-->
 @if (ViewBag.show)
 {
     <br />

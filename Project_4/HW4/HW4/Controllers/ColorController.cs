@@ -11,7 +11,7 @@ namespace HW4.Controllers
     public class ColorController : Controller
     {
         /// <summary>
-        /// 
+        /// This is only receving the inputs from the view and holding it here.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -20,7 +20,14 @@ namespace HW4.Controllers
             ViewBag.show = false;
             return View();
         }
-
+        /// <summary>
+        /// This takes the two value strings and then runs the conversion to display them as colors
+        /// This uses a color translator to convert the string into hexadecimal and the converts those
+        /// into the color values.
+        /// </summary>
+        /// <param name="ColorOne"></param>
+        /// <param name="ColorTwo"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Color_Maker(string ColorOne, string ColorTwo)
         {
