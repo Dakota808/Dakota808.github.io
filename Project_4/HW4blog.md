@@ -16,10 +16,6 @@ Here are the links to the this assignment:<br>
 
 ```html
 
-@{
-    ViewBag.Title = "Home Page";
-}
-
 <div class="jumbotron">
     <h1>CS 460 Homework #4</h1>
     <p class="lead">Practice and better undertsanding  of basic MVC. For more information click the link to learn more about the project </p>
@@ -52,7 +48,7 @@ Here are the links to the this assignment:<br>
 ![convertor](ConverterHtml.jpg)<br>
 ![page](ConverterPage.jpg)<br>
 
-<p>After the we setup the html page for this we are now working in the Controllers which will do all of the calculation. so we use the [Httpget] which will allow the code to recevie the inputs from the html page which I built a simple switch case similar to a if else statement that returns the values of doubles which can handle large decimals and whole numbers. I also add a viewbag which will be false until we return the results for the calculation. We also design a simlpe debuger to print the lines into the file to make sure the file is receiving and returning the right inputs.</p>
+<p>After the we setup the html page for this we are now working in the Controllers which will do all of the calculation. so we use the [Httpget] which will allow the code to recevie the inputs from the html page which I built a simple switch case similar to a if else statement that returns the values of doubles which can handle large decimals and whole numbers. I also add a viewbag which will be false until we return the results for the calculation. We also design a simlpe debugger to print the lines into the file to make sure the file is receiving and returning the right inputs.</p>
 
 ```CS
  [HttpGet]
@@ -97,4 +93,108 @@ Here are the links to the this assignment:<br>
 ```
 
 ### Color Maker
-<p>The color maker is similar to the converter and that we will use a excpetion handling method that will be discussed later.  </p>
+<p>The color maker is similar to the converter and that we will use a excpetion handling method that will be discussed later. The design of the view for this is different from how I worked on the converter view. The setup is using razor and it will design the same as converter view and it will use a form but will use a lot of razor setups where we can call different forms as well as building the html inside of the razor. So we still use html but razor uses more function to do certain task such as the use of converting the input string into hexdecimal which is the pattern of the result that we will send to the Colorcontorller. </p> <br>
+
+![Color page](ColorPage.jpg)<br>
+
+<p>This then uses the cod and we use the debugger to check and see if the program is receving the input values that the user submits and the formula to convert those inputs into what visual studio color which is used to convert it into the colors. However, the main issue is when we need to add the colors together. Calculations will go over the spectrum of the limit of the color which is 255 for each type from ARBG. So I built the if else statement for each one which will calculate the two colors and return the result. However if the color goes beyond 255 then we will initialize the code to set the value to 255 an when that happens that is the default color which is white. </p><br>
+
+```CS
+[HttpGet]
+        public ActionResult Color_Maker()
+        {
+            ViewBag.show = false;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Color_Maker(string ColorOne, string ColorTwo)
+        {
+
+            //debug print on strings
+            ColorOne = Request.Form["Color1"];
+            ColorTwo = Request.Form["Color2"];
+            Debug.WriteLine(ColorOne);
+            Debug.WriteLine(ColorTwo);
+            //error checking for values of objects
+            int color_A;
+            int color_R;
+            int color_B;
+            int color_G;
+            //convert strings to color objects
+            Color rgb_c1 = ColorTranslator.FromHtml(ColorOne);
+            Color rgb_c2 = ColorTranslator.FromHtml(ColorTwo);
+
+            //mix values of color objects w/ err checking
+            
+            //This is for the bits of the hexadecimal which is color A
+
+            if (rgb_c1.A + rgb_c2.A >= 255)
+            {
+                color_A = 255;
+            }
+            else
+            {
+                color_A = rgb_c1.A + rgb_c2.A;
+            }
+
+            if (rgb_c1.R + rgb_c2.R >= 255)
+            {
+                color_R = 255;
+            }
+            else
+            {
+                color_R = rgb_c1.R + rgb_c2.R;
+            }
+
+            if (rgb_c1.B + rgb_c2.B >= 255)
+            {
+                color_B = 255;
+            }
+            else
+            {
+                color_B = rgb_c1.B + rgb_c2.B;
+            }
+
+            if (rgb_c1.G + rgb_c2.G >= 255)
+            {
+                color_G = 255;
+            }
+            else
+            {
+                color_G = rgb_c1.G + rgb_c2.G;
+            }
+
+
+
+            //make mixed color object with values
+            string mixColor = ColorTranslator.ToHtml(Color.FromArgb(color_A, color_R, color_B, color_G));
+            //convert all color objects to html objects
+            if( ColorOne != null && ColorTwo != null)
+            {
+                ViewBag.show = true;
+
+                ViewBag.shape = "width:55px; height:55px; border: 1px soild #000; background:" + ColorOne + ";";
+                ViewBag.shape1 = "width:55px; height:55px; border: 1px soild #000; background:" + ColorTwo + ";";
+                ViewBag.shape2 = "width:55px; height:55px; border: 1px soild #000; background:" + mixColor + ";";
+
+            }
+
+
+            return View();
+
+        }
+```
+
+The viewbag.shape is just building the color of the setup around the what colors we print out and then in the view it is then desinged inside of the view to display the end result of the colors. <br>
+
+![Result](ColorMix.jpg)<br>
+
+<p>
+This gives a clear set of understanding of how the get and post are used to create the color and display the color mix from this case of the program. However the function of the prgram is the more key thing to look at where we use a lot of different systems from visual studio to run the program such as "system.drawing" which creates the colors and uses a color translator function to covert string into color. As well as how we can develop different types of functions to execute the same command example from a switch case instead of a if else statement. 
+</p>
+ 
+The end result is a program that runs to different functions but similar in design and the use of all of the differnet systems and programs that can be run in visual studio. The use of controllers to run the functions and debuging of code and uses of both razor and html in views.<br>
+
+### Merge Conflict 
+<p>Merge conlfict is something most people want to avoid when working with other people. For that code could be different with what others causing major problems in a project. To fix this it is best to pull to the current branch that your are working on to make sure that no issues come from the code itself. So I had built the 4.1 which is the converter and 4.2 which is the color maker. Both of these branches branch off of the master. However, I pulled all of my work from 4.1 to 4.2 to make sure the program was running properly and in then merged 4.2 to master. However, I ran into issue of the merge conflict when merging because of modification in the master which was my blog for homework three which I did in visual studio code which I fixed the merge issue from there and after that was settled the merge of 4.2 was successful. </p>
