@@ -9,7 +9,7 @@
 @using (Html.BeginForm("Color_Maker", "Color", FormMethod.Post))
 {   <!--This is for  color 1-->
     <div class="form-group">
-        <
+        
         @Html.Label("color1", "Color #1")
         <!--This uses a specfic pattern between the input that is typed in the text field itself.-->
         @Html.TextBox("Color1", null, htmlAttributes: new { @class = "form-control", pattern ="#[0-9A-Fa-f]{3,6}", type = "text" ,placeholder = "#eeffdd", required = "required"})
