@@ -1,0 +1,52 @@
+﻿
+<h2 class="text-center">@ViewBag.Message</h2>
+<h4 class="text-center"> Tentent Request Form</h4>
+
+<div class="row text-center">
+     <form>
+         <container class="row col-lg-8">
+             <div class="col-md-4" id="text1" >
+                 <label for="input">First Name</label>
+                 <input type="text"  class="layout-from" name="First" placeholder="First Name" required />
+             </div>
+
+             <div class="col-md-4" id="text2" >
+                 <label for="input">Last Name</label>
+                 <input type="text"  class="layout-from" name="Last" placeholder="Last Name" required />
+             </div>
+
+             <div class="col-md-4" id="phone">
+                   <label for="input">Phone</label>
+                   <input type="text"  class="layout-from" name="Phone" placeholder="Phone" required />
+             </div>
+         </container>
+
+         <container class="row col-lg-8" id="AB">
+             <div class="col-md-8" >
+                 <label for="input">Apartment Building</label>
+                 <input type="text"  class="layout-from" name="building" placeholder="Apartment Name" required />
+             </div>
+             
+             <div class="col-md-4" id="Room">
+                 <label for="input">Unit</label>
+                 <input type="number" class="layout-from" name="unit" placeholder="Unit#" required />
+             </div>
+         </container>
+
+         <div class="row">
+             <div class="col-lg-12">
+                 <textarea id="details" rows="6" cols="128" placeholder="Explain the request"></textarea>
+             </div>
+
+         </div>
+         <div>
+             <label for="input">Please check mark to confirm your request</label>
+             <input class="form-check-input" type="checkbox" name="submit" id="sub" required />
+         </div>
+         <button class="btn btn-primary" type="submit">Submit Request</button>
+         
+
+     </form>
+    
+</div>
+
