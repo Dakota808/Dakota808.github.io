@@ -47,7 +47,7 @@ namespace HW4.Controllers
                     break;
             }
 
-            string message = "Conversion: " + Convert.ToString(result) + " "+ mearsurement;
+            string message = "Conversion of "+ miles + " miles is: " + Convert.ToString(result) + " "+ mearsurement;
             ViewBag.Message = message;
 
 
