@@ -43,6 +43,10 @@ Video Demo<br>
 
 </div>
 ```
+Here is a screenshot of the index page using razor links.<br>
+![Hompage Razor](Homepage_Razor.jpg)<br>
+
+
 ![Homepage](Homepage.jpg)<br>
 
 <p>Then in convertor.cshtml file I desgined a text input for the distance you input, as well as the metric units that you will use to convert the distance such as millimeters, centimeters, etc.. The only thing to note is when I have user input the distances it will use a requried which makes the user have to put a value in the text field. Otherwise it will not continue. After that the code handles the input we use radio buttons which will connect to the controller that will execute the calculation/conversion of the input. It is a simple radio with a submit buttuon for this case. We also use the form to keep everything together in a groups.</p>
