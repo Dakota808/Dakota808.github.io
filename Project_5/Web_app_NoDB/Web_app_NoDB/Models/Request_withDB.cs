@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Web_app_NoDB.Models
 {
-    public class HW5_withDB
+    public class Request_withDB
     {
         [Key]
         public int ID { get; set; }
@@ -19,7 +19,7 @@ namespace Web_app_NoDB.Models
         public string LastName { get; set; }
        
         [Required]
-        [StringLength(12)]
+        [Phone]
         public string phoneNumber { get; set; }
 
         [Required]
@@ -35,12 +35,15 @@ namespace Web_app_NoDB.Models
         public string Request { get; set; }
 
         [Required]
-        public DateTime RequestSubmit { get; set; }
+        public DateTime RequestSubmitted { get; set; }
+
+        [Required]
+        public bool submitRequest { get; set; }
 
         public override string ToString()
         {
 
-            return $"{base.ToString()}: {FirstName} {LastName} {phoneNumber} {apartmentName} {apartmentUnit} {Request} {RequestSubmit}";
+            return $"{base.ToString()}: {FirstName} {LastName} {phoneNumber} {apartmentName} {apartmentUnit} {Request} {RequestSubmitted}";
         }
     }
 
