@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2AA8D721-6323-4FD8-B6E4-04B7E833A13F}</ProjectGuid>
+    <ProjectGuid>{8D0B5D4C-C8F0-4B96-8694-9288973775CA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Web_app_NoDB</RootNamespace>
-    <AssemblyName>Web_app_NoDB</AssemblyName>
+    <RootNamespace>HW5</RootNamespace>
+    <AssemblyName>HW5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -59,6 +59,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -149,19 +151,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Request_withDB1Controller.cs" />
-    <Compile Include="Controllers\Request_withDBController.cs" />
     <Compile Include="DAL\RequestContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Request_withDB.cs" />
+    <Compile Include="Models\Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Request.mdf" />
-    <Content Include="App_Data\Request_log.ldf">
-      <DependentUpon>Request.mdf</DependentUpon>
+    <Content Include="App_Data\HW5DB.mdf" />
+    <Content Include="App_Data\HW5DB_log.ldf">
+      <DependentUpon>HW5DB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -185,9 +185,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -199,18 +197,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Requests.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Forms.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Request_withDB\Create.cshtml" />
-    <Content Include="Views\Request_withDB\Delete.cshtml" />
-    <Content Include="Views\Request_withDB\Details.cshtml" />
-    <Content Include="Views\Request_withDB\Edit.cshtml" />
-    <Content Include="Views\Request_withDB\Index.cshtml" />
-    <Content Include="Views\Request_withDB1\Create.cshtml" />
-    <Content Include="Views\Request_withDB1\Delete.cshtml" />
-    <Content Include="Views\Request_withDB1\Details.cshtml" />
-    <Content Include="Views\Request_withDB1\Edit.cshtml" />
-    <Content Include="Views\Request_withDB1\Index.cshtml" />
+    <Content Include="Views\Requests\Create.cshtml" />
+    <Content Include="Views\Requests\Delete.cshtml" />
+    <Content Include="Views\Requests\Details.cshtml" />
+    <Content Include="Views\Requests\Edit.cshtml" />
+    <Content Include="Views\Requests\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -242,9 +235,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2873</DevelopmentServerPort>
+          <DevelopmentServerPort>12089</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2873/</IISUrl>
+          <IISUrl>http://localhost:12089/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

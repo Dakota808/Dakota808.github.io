@@ -1,5 +1,5 @@
 ﻿--Users table Request forms
-Create Table [dbo].[UserRequest]
+Create Table [dbo].[Requests]
 (
 	[ID] int identity (1,1) not null,
 	[FirstName] Nvarchar(64) not null,
@@ -7,15 +7,14 @@ Create Table [dbo].[UserRequest]
 	[PhoneNumber] Nvarchar(12) not null,
 	[ApartementName] Nvarchar(64) not null,
 	[Unit] int not null,
-	[Request] Nvarchar(max) not null,
+	[RequestReport] Nvarchar(max) not null,
 	[RequestTime] Datetime not null,
 	[submitRequest] bit not null,
-	Constraint [PK.dbo.UserRequest] Primary Key Clustered ([ID] ASC)
+	Constraint [PK.dbo.Requests] Primary Key Clustered ([ID] ASC)
 );
 
-Insert Into [dbo].[UserRequest] (FirstName, LastName, PhoneNumber, ApartementName, Unit, Request, RequestTime, submitRequest) Values
+Insert Into [dbo].[Requests] (FirstName, LastName, PhoneNumber, ApartementName, Unit, RequestReport, RequestTime, submitRequest) Values
 ('Jake', 'Collins', '808-694-2289', 'Alamoana Apartments', 302, 'Need to have someone check our smoke deterctors are functioning', '2018-08-24', 0),
 ('Aichi', 'Sendou', '808-551-2750', 'Mililani Apartments', 442, 'Requesting for cleaners to come in and clean for my new roommate', '2018-09-18', 1),
 ('Kai', 'Toshiki', '520-678-1180', 'Mililani Apartments', 442, 'Moving into the apartment on september 30th, 2018', '2018-09-18', 1)
 Go
-

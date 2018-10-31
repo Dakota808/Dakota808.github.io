@@ -1,0 +1,75 @@
+﻿@model IEnumerable<HW5.Models.Request>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apartmentUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestReport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestSubmitted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.submitRequest)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apartmentUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestReport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestSubmitted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.submitRequest)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
