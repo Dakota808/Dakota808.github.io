@@ -16,11 +16,11 @@ namespace HW5.Controllers
         //GET Request.cs from models
         public ActionResult Index()
         {
-            return View(db.Requests.ToList());
+            return View();
         }
          
 
-        public ActionResult Requests()
+        public ActionResult Request()
         {
             ViewBag.Message = "Apartment Application";
             return View(db.Requests.ToList());
