@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web_app_NoDB.Models;
 
 namespace Web_app_NoDB.Controllers
 {
@@ -13,16 +14,21 @@ namespace Web_app_NoDB.Controllers
             return View();
         }
 
-        public ActionResult Request()
+        public ActionResult Requests()
         {
             ViewBag.Message = "Apartment Application";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
+
+        public ActionResult Create(Request_withDB requestReport)
+        {
+            ViewBag.Message = "Requests Forms";
 
             return View();
         }

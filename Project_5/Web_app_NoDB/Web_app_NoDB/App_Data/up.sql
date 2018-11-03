@@ -14,7 +14,8 @@ Create Table [dbo].[UserRequest]
 );
 
 Insert Into [dbo].[UserRequest] (FirstName, LastName, PhoneNumber, ApartementName, Unit, Request, RequestTime, submitRequest) Values
-('Jake', 'Collins', '808-694-2289', 'Alamoana Apartments', 302, 'Need to have someone check our smoke deterctors are functioning', '2018-08-24', 1)
+('Jake', 'Collins', '808-694-2289', 'Alamoana Apartments', 302, 'Need to have someone check our smoke deterctors are functioning', '2018-08-24', 0),
+('Aichi', 'Sendou', '808-551-2750', 'Mililani Apartments', 442, 'Requesting for cleaners to come in and clean for my new roommate', '2018-09-18', 1),
+('Kai', 'Toshiki', '520-678-1180', 'Mililani Apartments', 442, 'Moving into the apartment on september 30th, 2018', '2018-09-18', 1)
 Go
 
-Select * from UserRequest;
