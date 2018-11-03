@@ -9,7 +9,7 @@
 
 @using (Html.BeginForm()) 
 {
-    @Html.AntiForgeryToken()
+   @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
         <h4>Request</h4>
@@ -58,8 +58,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.RequestReport, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.RequestReport, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RequestReport, "", new { @class = "textarea" })
+                <div class="Detail-Requests">
+                    @Html.EditorFor(model => model.RequestReport, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RequestReport, "", new { @class = "text-danger" })
+                </div>
+
             </div>
         </div>
 
