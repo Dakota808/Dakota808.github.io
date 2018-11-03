@@ -46,7 +46,7 @@ namespace ApartmentApp.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,Unit,RequestReport,RequestTime,SubmitRequest")] Request request)
         {
             if (ModelState.IsValid)
@@ -78,7 +78,7 @@ namespace ApartmentApp.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,Unit,RequestReport,RequestTime,SubmitRequest")] Request request)
         {
             if (ModelState.IsValid)
@@ -107,7 +107,7 @@ namespace ApartmentApp.Controllers
 
         // POST: Requests/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Request request = db.Requests.Find(id);
