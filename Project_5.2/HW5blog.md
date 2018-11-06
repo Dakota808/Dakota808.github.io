@@ -248,3 +248,11 @@ namespace ApartmentApp.Controllers
 }
 
 ```
+
+Note: that we do not need to use the validate Anti forgery token because that is desgined to stop the process to run outside of the visual studio enviorment.
+
+<p>
+Something to look into is the main weird problems that visual studio causes for some people. For me it came from the bin where the program would not clean or rebuild the solution causing the program to run. So one way to fix this is to restart the computer and then delete the bin folder in the application to make sure it doesn't break on you.
+</p>
+
+For more info see demo.
