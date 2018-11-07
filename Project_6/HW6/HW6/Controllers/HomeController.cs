@@ -3,14 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HW6.Models;
 
 namespace HW6.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private EFUserContext db = new EFUserContext();
+
+        //Get: People/Users
+        public ActionResult Index(string Search)
         {
-            return View();
+            if (Search == null || Search == "")
+            {
+                ViewBag.show = false;
+                return View();
+
+            }
+            else
+            {
+                ViewBag.show = true;
+                return View(db.People.Where(p => p.FullName.ToUpper().Contains(Search.ToUpper())).ToList());
+            }
+           
         }
 
         public ActionResult About()
@@ -20,6 +35,12 @@ namespace HW6.Controllers
             return View();
         }
 
+        public ActionResult Details(int id)
+        {
+            Person person = new Person();
+            person = db.People.Find(id);
+            return View("Details", person);
+        }
         
         public ActionResult Contact()
         {
