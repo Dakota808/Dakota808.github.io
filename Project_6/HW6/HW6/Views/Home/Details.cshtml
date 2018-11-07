@@ -1,11 +1,11 @@
-﻿@model HW6.Models.Person
+﻿@model HW6.Models.ViewModels.WWModelView
 
 @{
     ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
-
+@*This is all of the different people*@
 <div>
     <h4>Person</h4>
     <hr />
@@ -13,66 +13,151 @@
 
 
         <dt>
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.MyPerson.FullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FullName)
+            @Html.DisplayFor(model => model.MyPerson.FullName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PreferredName)
+            @Html.DisplayNameFor(model => model.MyPerson.PreferredName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PreferredName)
+            @Html.DisplayFor(model => model.MyPerson.PreferredName)
         </dd>
 
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+            @Html.DisplayNameFor(model => model.MyPerson.PhoneNumber)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
+            @Html.DisplayFor(model => model.MyPerson.PhoneNumber)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FaxNumber)
+            @Html.DisplayNameFor(model => model.MyPerson.FaxNumber)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FaxNumber)
+            @Html.DisplayFor(model => model.MyPerson.FaxNumber)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EmailAddress)
+            @Html.DisplayNameFor(model => model.MyPerson.EmailAddress)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EmailAddress)
+            @Html.DisplayFor(model => model.MyPerson.EmailAddress)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Photo)
+            @Html.DisplayNameFor(model => model.MyPerson.Photo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Photo)
+            @Html.DisplayFor(model => model.MyPerson.Photo)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ValidFrom)
+            @Html.DisplayNameFor(model => model.MyPerson.ValidFrom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ValidFrom)
+            @Html.DisplayFor(model => model.MyPerson.ValidFrom)
         </dd>
 
 
     </dl>
 </div>
+
+@*This is for the customers*@
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCustomer.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.CustomerName)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCustomer.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCustomer.FaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.FaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCustomer.WebsiteURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.WebsiteURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCustomer.ValidFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.ValidFrom)
+        </dd>
+
+
+    </dl>
+</div>
+
+<div>
+    <h3>Purchases</h3>
+    <dl>
+        <dt>
+            @Html.Label("order-count", "Orders:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCustomer.Orders.Count)
+        </dd>
+
+        <dt>
+            @Html.Label("gross-sales","Gross Sales: " )
+        </dt>
+        
+        <dd>
+            @string.Format("{0:C}", ViewBag.GrossSales)
+        </dd>
+
+
+        <dt>
+            @Html.Label("gross-profit", "Gross Profit: ")
+        </dt>
+        <dd>
+            @string.Format("{0:C}", ViewBag.GrossProfit)
+        </dd>
+
+    </dl>
+
+</div>
+
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonID }) |
+    
     @Html.ActionLink("Back to List", "Index")
 </p>

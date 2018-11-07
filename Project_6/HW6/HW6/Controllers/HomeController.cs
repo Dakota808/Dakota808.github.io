@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HW6.Models;
+using HW6.Models.ViewModels;
+using System.Net;
 
 namespace HW6.Controllers
 {
@@ -14,6 +16,7 @@ namespace HW6.Controllers
         //Get: People/Users
         public ActionResult Index(string Search)
         {
+            WWModelView vm = new WWModelView();
             if (Search == null || Search == "")
             {
                 ViewBag.show = false;
@@ -35,11 +38,36 @@ namespace HW6.Controllers
             return View();
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            Person person = new Person();
-            person = db.People.Find(id);
-            return View("Details", person);
+            WWModelView vm = new WWModelView
+            {
+                MyPerson = db.People.Find(id)
+            };
+            ViewBag.IsP = false;
+
+            if (vm.MyPerson.Customers2.Count() > 0)
+            {
+                ViewBag.IsP = true;
+                int customerID = vm.MyPerson.Customers2.FirstOrDefault().CustomerID;
+                vm.MyCustomer = db.Customers.Find(customerID);
+
+                //Sums the Gross sales
+                ViewBag.GrossSales = vm.MyCustomer.Orders.SelectMany(s => s.Invoices).SelectMany(p => p.InvoiceLines).Sum(x => x.ExtendedPrice);
+
+                ViewBag.GrossProfit = vm.MyCustomer.Orders.SelectMany(s => s.Invoices).SelectMany(p => p.InvoiceLines).Sum(x => x.LineProfit);
+            }
+
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Person myPerson = db.People.Find(id);
+            if(myPerson == null)
+            {
+                return HttpNotFound();
+            }
+            return View("Details", vm);
         }
         
         public ActionResult Contact()
