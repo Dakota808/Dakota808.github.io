@@ -6,48 +6,52 @@
 @*This is the design of the search function of the controller, which takes the string values and returns it to the view from the person model.*@
 
 
-
-<h2 id="title">Client Search</h2>
-
-@using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "form-inline" }))
-{<br />
-    <div class="row form-group">
-        <div class="col-md-6 text-center">
-            @Html.TextBox("Search","", new
+<div class="col-3"></div>
+<div class="col-6">
+    <h2 id="title">Client Search</h2>
+    <div class="row">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "form-inline" }))
+        {
+            <div class="form-group" style="max-width: none">
+                    @Html.TextBox("Search", "", new
        {
-           @class ="Form-control", placeholder = "Client search",
+           @class = "form-control", @id="search",
+           placeholder = "Client search",
            required = "required"
-       }  )
-            <button class="btn btn-primary" style="color:whitesmoke" type="submit">Search</button>
-        </div>
-    </div>
-
-    if (ViewBag.show)
-    {
-        <br />
-
-        if (Model.Count() == 0)
-        {
-            <h3 style="color:red">Sorry no such client exist</h3>
-
-
-        }
-        else
-        {
-            <div>
-                <h3>Client</h3>
-            </div>
-            <br />
-            foreach (var person in Model)
-            {
-                <div>
-                    <a class="text-info" href="Home/Details/@person.PersonID" role="button">@person.FullName (@person.PreferredName)</a>
+       })
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
+
+            if (ViewBag.show)
+            {
+                <br />
+
+                if (Model.Count() == 0)
+                {
+                    <h3 style="color:red">Sorry no such client exist</h3>
+
+
+                }
+                else
+                {
+                    <div>
+                        <h3>Client</h3>
+                    </div>
+                    <br />
+                    foreach (var person in Model)
+                    {
+                        <div>
+                            <a class="text-info" href="Home/Details/@person.PersonID" role="button">@person.FullName (@person.PreferredName)</a>
+                        </div>
+
+
+                    }
+                }
 
 
             }
         }
+    </div>
+</div>
 
-
-    }
-}
+<div class="col-3"></div>

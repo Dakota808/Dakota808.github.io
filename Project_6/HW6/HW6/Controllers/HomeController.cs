@@ -56,6 +56,13 @@ namespace HW6.Controllers
                 ViewBag.GrossSales = vm.MyCustomer.Orders.SelectMany(s => s.Invoices).SelectMany(p => p.InvoiceLines).Sum(x => x.ExtendedPrice);
 
                 ViewBag.GrossProfit = vm.MyCustomer.Orders.SelectMany(s => s.Invoices).SelectMany(p => p.InvoiceLines).Sum(x => x.LineProfit);
+
+                vm.MyInvoiceLine = vm.MyCustomer.Orders.SelectMany(y => y.Invoices)
+                                                                   .SelectMany(z => z.InvoiceLines)
+                                                                   .OrderByDescending(v => v.LineProfit)
+                                                                   .Take(10)
+                                                                   .ToList();
+
             }
 
             if(id == null)

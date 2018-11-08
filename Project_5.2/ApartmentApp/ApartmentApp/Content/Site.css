@@ -17,9 +17,9 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 .Detail-Request textarea {
-    width: 570px;
-    height: 350px;
-}
+    width: 280px;
+
+}*/
