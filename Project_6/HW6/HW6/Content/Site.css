@@ -17,9 +17,12 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-/*input,
+input,
 select,
-.Detail-Request textarea {
-    width: 280px;
-
-}*/
+textarea {
+    max-width: 280px;
+}
+#search
+{
+    width: 100%;
+}

@@ -41,16 +41,16 @@ namespace ApartmentApp.Models
         public string RequestReport { get; set; }
 
         [Required]
-        [Display(Name ="Date of  Request")]
+        [Display(Name ="Date of Request")]
         public DateTime RequestTime { get; set; }
 
         [Required]
-        [Display(Name ="Submitted") ]
+        [Display(Name ="Submit") ]
         public bool SubmitRequest { get; set; }
 
         public override string ToString()
         {
-            return $"{base.ToString()}: First Name = {FirstName} Last Name = {LastName} Phone Number = {PhoneNumber} Apartment = {ApartmentName} Unit = {Unit} Request = {RequestReport} Submission ={RequestTime} Submitted = {SubmitRequest}";
+            return $"{base.ToString()}: First Name = {FirstName} Last Name = {LastName} Phone Number = {PhoneNumber} Apartment = {ApartmentName} Unit = {Unit} Request = {RequestReport} Submission ={RequestTime} Submit = {SubmitRequest}";
         }
     }
 }
