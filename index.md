@@ -19,4 +19,4 @@ Here is where all of the projects are located:<br>
 [Homework #3](Project_3/HW3blog.md)<br>
 [Homework #4](Project_4/HW4blog.md)<br>
 [Homework #5](Project_5.2/HW5blog.md)<br>
-[Homework #6]
+[Homework #6](Project_6/HW6blog.md)

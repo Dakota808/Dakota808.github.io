@@ -13,7 +13,7 @@ So in this assignment we create the database using sql which visual studio build
 Links to assignment:
 [Main Page](https://dakota808.github.io/)<br>
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_5.2/ApartmentApp/ApartmentApp)<br>
-[Demo]<br>
+[Demo](https://www.youtube.com/watch?v=z6QR2aLX6C8&feature=youtu.be)<br>
 
 <p>
 This program assignment is difficult due to some difficult problems that occur for no reason sometimes. One example is when the program runs and bin file does not responed to cleaning or rebuilding of the solution. This is how ever the code is simple to understand how it functions. 
@@ -255,4 +255,51 @@ Note: that we do not need to use the validate Anti forgery token because that is
 Something to look into is the main weird problems that visual studio causes for some people. For me it came from the bin where the program would not clean or rebuild the solution causing the program to run. So one way to fix this is to restart the computer and then delete the bin folder in the application to make sure it doesn't break on you.
 </p>
 
+<p>
+One thing to pull from the post method for both the create and edit is that we add a signal line of code to make the run Date Time on the current time on the computer and when you send or edit the form document.
+</p>
+
+## Before
+```CS
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,Unit,RequestReport,RequestTime,SubmitRequest")] Request request)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Requests.Add(request);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(request);
+        }
+        
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,Unit,RequestReport,RequestTime,SubmitRequest")] Request request)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(request).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(request);
+        }
+```
+
+## After
+```CS
+    if (ModelState.IsValid)
+    {
+        request.RequestTime = DateTime.Now;
+        db.Entry(request).State = EntityState.Modified;
+        db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    return View(request);
+
+```
+```CS
+//This is line code is used for both the Create and the Edit [HttpPost] fucntion.
+request.RequestTime = DateTime.Now;
+```
+<p>So this line of code would then just run through the program and timestamp on when it was submitted in the application.</p>
 For more info see demo.

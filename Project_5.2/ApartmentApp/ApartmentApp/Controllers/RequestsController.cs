@@ -84,6 +84,7 @@ namespace ApartmentApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                request.RequestTime = DateTime.Now;
                 db.Entry(request).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
