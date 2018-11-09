@@ -12,4 +12,6 @@ Homework 3 Completed<br>
 I have just updated HW 4 lab assignment and am adding demo video.<br>
 Homework 4 Completed <br>
 11/03/2018<br>
-Homework 5 Completed
+Homework 5 Completed<br>
+11/08/2018<br>
+Homework 6 completed and fixed issue on homework 5. 
