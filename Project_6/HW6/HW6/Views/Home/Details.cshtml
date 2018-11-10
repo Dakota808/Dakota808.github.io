@@ -84,109 +84,112 @@
 </div>
 
 @*This is for the customers*@
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="dl-horizontal">
+@if (ViewBag.Isp)
+{
+    <div>
+        <h4>Customer</h4>
+        <hr />
+        <dl class="dl-horizontal">
 
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MyCustomer.CustomerName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MyCustomer.CustomerName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.CustomerName)
-        </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MyCustomer.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MyCustomer.FaxNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.FaxNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MyCustomer.WebsiteURL)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.WebsiteURL)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MyCustomer.ValidFrom)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.ValidFrom)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.CustomerName)
+            </dd>
 
 
-    </dl>
-</div>
+            <dt>
+                @Html.DisplayNameFor(model => model.MyCustomer.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.PhoneNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MyCustomer.FaxNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.FaxNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MyCustomer.WebsiteURL)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.WebsiteURL)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MyCustomer.ValidFrom)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.ValidFrom)
+            </dd>
+
+
+        </dl>
+    </div>
 
 @*This is the information of the Gross sales and profit*@
-<div>
-    <h3>Purchases</h3>
-    <dl>
-        <dt>
-            @Html.Label("order-count", "Orders:")
-        </dt>
+    <div>
+        <h3>Purchases</h3>
+        <dl>
+            <dt>
+                @Html.Label("order-count", "Orders:")
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MyCustomer.Orders.Count)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MyCustomer.Orders.Count)
+            </dd>
 
-        <dt>
-            @Html.Label("gross-sales","Gross Sales: " )
-        </dt>
+            <dt>
+                @Html.Label("gross-sales","Gross Sales: " )
+            </dt>
         
-        <dd>
-            @string.Format("{0:C}", ViewBag.GrossSales)
-        </dd>
+            <dd>
+                @string.Format("{0:C}", ViewBag.GrossSales)
+            </dd>
 
 
-        <dt>
-            @Html.Label("gross-profit", "Gross Profit: ")
-        </dt>
-        <dd>
-            @string.Format("{0:C}", ViewBag.GrossProfit)
-        </dd>
+            <dt>
+                @Html.Label("gross-profit", "Gross Profit: ")
+            </dt>
+            
+            <dd>
+                @string.Format("{0:C}", ViewBag.GrossProfit)
+            </dd>
 
-    </dl>
+        </dl>
 
-</div>
+    </div>
 @*This is the information for all products sold by a someone*@
-<div>
-    <h3>Purchased Items</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    @Html.Label("stock-item", "Stock Item")
-                </th>
+    <div>
+        <h3>Purchased Items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.Label("stock-item", "Stock Item")
+                    </th>
 
-                <th>
-                    @Html.Label("description", "Description")
-                </th>
-                <th>
-                    @Html.Label("line-profit", "Profit")
-                </th>
-                <th>
-                    @Html.Label("sale-person", "Sales Person")
-                </th>
-            </tr>
-        </thead>
+                    <th>
+                        @Html.Label("description", "Description")
+                    </th>
+                    <th>
+                        @Html.Label("line-profit", "Profit")
+                    </th>
+                    <th>
+                        @Html.Label("sale-person", "Sales Person")
+                    </th>
+                </tr>
+            </thead>
 
         @foreach (var product in Model.MyInvoiceLine)
         {
@@ -216,14 +219,15 @@
         }
 
 
-    </table>
-</div>
+        </table>
+    </div>
+}
 
 <div class="col-md-5">
     <div id="map" style="height: 180px"></div>
     <script>
-        var long = @Model.MyCustomer.DeliveryLocation.Longitude
-        var lat = @Model.MyCustomer.DeliveryLocation.Latitude
+        var long = @Model.MyCustomer.DeliveryLocation.Longitude;
+        var lat = @Model.MyCustomer.DeliveryLocation.Latitude;
         var map = L.map('map').setView([lat, long ], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -234,7 +238,8 @@
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
     </script>
-</divclass="col-md-3">
+</div>
+<div class="col-md-3"></div>
 
 <p>
     

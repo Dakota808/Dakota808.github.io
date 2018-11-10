@@ -8,7 +8,7 @@
 Links to Assignment:<br>
 [Main Page](https://dakota808.github.io/)<br>
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_6/HW6/HW6)<br>
-[Demo]()<br>
+[Demo](https://www.youtube.com/watch?v=Zr9DuxAj5jw&feature=youtu.be)<br>
 
 ## Models
 
