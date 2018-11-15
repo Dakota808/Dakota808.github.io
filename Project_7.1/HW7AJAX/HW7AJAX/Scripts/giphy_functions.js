@@ -27,7 +27,7 @@ function isKeyword(keyWord)
     var isKeyword = true;
     for (var i = 0; i < boringWords.length; i++)
     {
-        if (boringWords[i].toLowerCase() == temp.toLowerCase())
+        if (boringWords[i].toLowerCase() === temp.toLowerCase())
         {
             isKeyword = false;
         }
@@ -65,4 +65,22 @@ function getKeywordTyped()
     }
 
     return keyWord;
+}
+
+function actionChoice(keyWord)
+{
+    if (isKeyword(keyWord)
+    {
+        $.ajax(
+            {
+                
+            });
+
+    }
+    else
+    {
+        insertWord(keyWord);
+
+    }
+
 }
