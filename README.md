@@ -14,4 +14,6 @@ Homework 4 Completed <br>
 11/03/2018<br>
 Homework 5 Completed<br>
 11/08/2018<br>
-Homework 6 completed and fixed issue on homework 5. 
+Homework 6 completed and fixed issue on homework 5. <br>
+11/17/2018<br>
+Homework 7 completed
