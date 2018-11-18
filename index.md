@@ -10,7 +10,7 @@ My name is Dakota Koki I am a computer science major. Reason for this is to disp
 
 ### Repository
 Here is a link to local repository on github:<br>
-[Repository](https://github.com/Dakota808/Dakota808.github.io)
+[Repository](https://github.com/Dakota808/Dakota808.github.io)<br>
 
 ### Projects
 Here is where all of the projects are located:<br>
@@ -19,4 +19,5 @@ Here is where all of the projects are located:<br>
 [Homework #3](Project_3/HW3blog.md)<br>
 [Homework #4](Project_4/HW4blog.md)<br>
 [Homework #5](Project_5.2/HW5blog.md)<br>
-[Homework #6](Project_6/HW6blog.md)
+[Homework #6](Project_6/HW6blog.md)<br>
+[Homework #7](Project_7.3)<br>
