@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+
+    <div style="width: 100%; margin: 0 auto;">
+        <div>
+            @Html.TextBox("inputs", "",
+           new
+           {
+               @class = "form-control",
+               id = "stringInputs",
+               placeholder = "Type your message here",
+               type = "text"
+           })
+
+            <input type="button" id="clear" value="Restart" onclick="window.location.reload()" />
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 20px;"></div>
+
+<div id="container" style="margin-left: 15px;">
+    <p>
+        <div id="message"></div>
+    </p>
+
+
+    @section scriptSection
+    {
+
+        <script type="text/javascript" src="~/Scripts/giphy_functions.js"></script>
+
+    }
+</div>
+
+<footer>
+    <hr />
+    <p>&copy; @DateTime.Now.Year - Dakota Koki</p>
+</footer>
+
+
