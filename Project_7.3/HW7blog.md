@@ -131,6 +131,39 @@ $(document).ready(main);
 The configuration of this project was also something we had to handle so in this case we have to moddify the route config to make sure that the application also listens to the two controllers that I used in this particular assignment. One of is for main view page and the other is using the path and connection for the second controller which handles the api connection between the two contorllers.
 </p>
 
+### Routing config
+```CS
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+
+namespace HW7v2
+{
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "GiphyTranslator",
+                url: "{controller}/{action}/{keyWord}",
+                defaults: new { controller = "Request", action = "GiphyTranslator", keyWord = UrlParameter.Optional }
+            );
+        }
+    }
+}
+```
+
 ### Home contoller: Handles the main view page for the application
 ```CS
 using System;
