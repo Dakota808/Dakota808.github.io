@@ -4,7 +4,7 @@ using System.Web;
 using System.Dynamic;
 using System.Web.Mvc;
 
-namespace HW7AJAX.Controllers
+namespace HW7v2.Controllers
 {
     public class HomeController : Controller
     {

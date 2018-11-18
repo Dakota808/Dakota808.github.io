@@ -3,16 +3,18 @@
     ViewBag.Title = "Index";
 }
 
-
 <div class="row">
 
     <div style="width: 100%; margin: 0 auto;">
         <div>
-           @Html.TextBox("inputs", "",
-           new {@class ="form-control", id = "stringInputs",
-           placeholder = "Type your message here",
-           type = "text"
-            })
+            @Html.TextBox("inputs", "",
+           new
+           {
+               @class = "form-control",
+               id = "stringInputs",
+               placeholder = "Type your message here",
+               type = "text"
+           })
 
             <input type="button" id="clear" value="Restart" onclick="window.location.reload()" />
         </div>
@@ -39,4 +41,5 @@
     <hr />
     <p>&copy; @DateTime.Now.Year - Dakota Koki</p>
 </footer>
+
 

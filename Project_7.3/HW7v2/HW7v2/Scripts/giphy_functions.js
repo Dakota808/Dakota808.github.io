@@ -1,5 +1,9 @@
-﻿var boringWords = ["", "the", "to", "and", "of", "that", "have", "from", "by", "save",
-    "was", "has", "am", "over", "up", "down", "too", "who", "get", "always"
+﻿var boringWords = ["", "the", "to", "and", "of", "that", "have", "from", "by", "save","was", "has", "am", "over", "up", "down", "too", "who", "get", "always", "his", "hers", "by", "from", "they", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "public", "are",
+    "make", "can", "like", "time", "no", "just", "know", "take", "people", "into", "year", "your", "good", "some", "could", "always", "went",
+    "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "it's", "over", "think", "also", "back", "really", "store",
+    "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "every",
+    "day", "most", "us", "my", "mine", "yours", "they're", "I'm", "going", "took", "huge", "big", "large", "very", "am", "let's", "had",
+    "try", "wicked", "pretty", "is", "please", "was", "name", "named", "stay", "away", "any", "anymore", "we're", "brought", "does", "did"
 ];
 
 

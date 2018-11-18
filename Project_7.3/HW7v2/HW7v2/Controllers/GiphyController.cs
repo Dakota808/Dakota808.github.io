@@ -5,11 +5,14 @@ using System.Dynamic;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
+using HW7v2.DAL;
+using HW7v2.Models;
 
-namespace HW7AJAX.Controllers
+namespace HW7v2.Controllers
 {
     public class GiphyController : Controller
     {
+        private SearchLogContext requestLog = new SearchLogContext();
         // GET: Giphy
         [HttpGet]
         public JsonResult GiphyTranslator(string keyWord)
@@ -29,6 +32,20 @@ namespace HW7AJAX.Controllers
             var serialize = new System.Web.Script.Serialization.JavaScriptSerializer();
 
             var jsonResponse = serialize.DeserializeObject(convertResponse);
+
+            SearchLog requestLogDB = requestLog.SearchLogs.Create();
+
+            requestLogDB.RequestTimestamp = DateTime.Now;
+
+            requestLogDB.RequestType = Request.Url.OriginalString;
+
+            requestLogDB.ClientIP = Request.UserHostAddress;
+
+            requestLogDB.BrowserSearch = Request.Browser.Type;
+
+            requestLog.SearchLogs.Add(requestLogDB);
+            requestLog.SaveChanges();
+
 
             data.Close();
             getResponse.Close();
