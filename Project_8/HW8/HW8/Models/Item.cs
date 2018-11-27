@@ -20,10 +20,12 @@ namespace HW8.Models
 
         [Required]
         [StringLength(255)]
+        [Display (Name = "Item")]
         public string ItemName { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Display (Name = "Description")]
         public string ItemDescription { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
