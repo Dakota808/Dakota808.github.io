@@ -37,12 +37,12 @@ Insert into Sellers(SellersName)
 
  Insert into Items(ItemName, ItemDescription, Seller)
   Values
-  ('Abraham Lincoln Hammer', 'A bench mallet from a broken rail-splitting maul in 1829 and owned by Abraham Lincoln', '3'),
-  ('Albert Einstiens Telescope', 'A brass telescope owned by Albert Einstein in Germany, Circa 1927', '1'),
-  ('Bob Dylan Love Poems', 'Five versions of an original unpublished, handwritten, love poem by Bob Dylan', '2');
+  ('Abraham Lincoln Hammer', 'A bench mallet from a broken rail-splitting maul in 1829 and owned by Abraham Lincoln', 3),
+  ('Albert Einstiens Telescope', 'A brass telescope owned by Albert Einstein in Germany, Circa 1927', 1),
+  ('Bob Dylan Love Poems', 'Five versions of an original unpublished, handwritten, love poem by Bob Dylan', 2);
 
-Insert into Bids(item, bider, prices, TimeStamps)
+Insert into Bids(Item, Bider, Prices, TimeStamps)
  Values
- ('1','3', '$250,000', '12/02/2018 09:04:22'),
- ('3', '1', '$95,000', '11/24/2018 08:44:03'),
- ('2', '2', '$100,000', '11/18/2018 10:24:32');
+ (1,3, '$250,000', '12/02/2018 09:04:22'),
+ (3, 1, '$95,000', '11/24/2018 08:44:03'),
+ (2, 2, '$100,000', '11/18/2018 10:24:32');
