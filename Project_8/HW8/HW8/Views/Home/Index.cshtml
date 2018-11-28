@@ -1,0 +1,76 @@
+﻿@model IEnumerable<HW8.Models.Bid>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Auction House </h1>
+    <p class="lead">Welcome to this online auction.</p><br>
+    <p>For more information of the assignment click here:</p>
+    <p><a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW8_1819.html" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer.BuyersName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prices)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeStamps)
+            </th>
+        </tr>
+    @foreach (var bid in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(biditem => bid.Item1.ItemName)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.Buyer.BuyersName)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.Prices)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.TimeStamps)
+            </th>
+        </tr>
+
+
+    }
+
+
+    </table>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Place Bid</h2>
+        <p>
+            If you would like to join in our online auction and would like to place a bid click here to place your bid for the item.
+        </p>
+        <p><a class="btn btn-default" href="/Bids/Create">Place Bid &raquo;</a></p>
+    </div>
+    
+
+    <div class="col-md-4">
+        <h2>Item List</h2>
+        <p>To see the list of items what is the current bids for item click here:</p>
+        <p><a class="btn btn-default" href="/Items/Index">Auction List &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Sell Item</h2>
+        <p>If you want to see a new Item click:</p>
+        <p><a class="btn btn-default" href="/Items/Create">Sell &raquo;</a></p>
+    </div>
+</div>
