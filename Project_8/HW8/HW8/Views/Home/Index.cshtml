@@ -27,6 +27,25 @@
                 @Html.DisplayNameFor(model => model.TimeStamps)
             </th>
         </tr>
+    @foreach (var bid in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(biditem => bid.Item1.ItemName)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.Buyer.BuyersName)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.Prices)
+            </th>
+            <th>
+                @Html.DisplayFor(biditem => bid.TimeStamps)
+            </th>
+        </tr>
+
+
+    }
 
 
     </table>
@@ -44,7 +63,7 @@
     
 
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
+        <h2>Item List</h2>
         <p>To see the list of items what is the current bids for item click here:</p>
         <p><a class="btn btn-default" href="/Items/Index">Auction List &raquo;</a></p>
     </div>
