@@ -129,5 +129,19 @@ namespace HW8.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public JsonResult DisplayBids(int? id)
+        {
+            var bidData = db.Items.Where(i => i.ItemID == id)
+                .Select(b => b.Bids)
+                .FirstOrDefault()
+                .Select(b => new { b.Prices, b.Buyer.BuyersName })
+                .OrderByDescending(b => b.Prices)
+                .ToList();
+            System.Diagnostics.Debug.WriteLine("Bid Data: " + bidData);
+
+            return Json(bidData, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }
