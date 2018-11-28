@@ -16,4 +16,6 @@ Homework 5 Completed<br>
 11/08/2018<br>
 Homework 6 completed and fixed issue on homework 5. <br>
 11/17/2018<br>
-Homework 7 completed
+Homework 7 completed<br>
+11/28/18<br>
+Homework 8 completed and moving on to publishing the app on Azure.
