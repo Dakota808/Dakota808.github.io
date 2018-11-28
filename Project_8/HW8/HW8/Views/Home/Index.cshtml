@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<HW8.Models.Bid>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -10,6 +12,28 @@
 </div>
 
 <div class="row">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer.BuyersName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prices)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeStamps)
+            </th>
+        </tr>
+
+
+    </table>
+</div>
+
+
+<div class="row">
     <div class="col-md-4">
         <h2>Place Bid</h2>
         <p>
@@ -17,6 +41,7 @@
         </p>
         <p><a class="btn btn-default" href="/Bids/Create">Place Bid &raquo;</a></p>
     </div>
+    
 
     <div class="col-md-4">
         <h2>Web Hosting</h2>

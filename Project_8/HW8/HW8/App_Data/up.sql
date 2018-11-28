@@ -19,7 +19,7 @@ Create Table [dbo].[Bids](
  BidID int identity (1,1) not null Primary Key, 
  Item int Foreign Key References Items (ItemID),
  Bider int Foreign Key References Buyers (BuyerID),
- TimeStamps Date not null,
+ TimeStamps Datetime not null,
  Prices varchar (255) not null
 );
 

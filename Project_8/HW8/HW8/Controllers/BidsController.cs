@@ -6,13 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using HW8.DAL;
 using HW8.Models;
 
 namespace HW8.Controllers
 {
     public class BidsController : Controller
     {
-        private AuctionContext db = new AuctionContext();
+        private BidsContext db = new BidsContext();
 
         // GET: Bids
         public ActionResult Index()
@@ -53,9 +54,10 @@ namespace HW8.Controllers
         {
             if (ModelState.IsValid)
             {
+                bid.TimeStamps = System.DateTime.Now;
                 db.Bids.Add(bid);
                 db.SaveChanges();
-                return RedirectToAction("Details","Items", new {id = bid.Item});
+                return RedirectToAction("Details", "Items", new {id = bid.Item });
             }
 
             ViewBag.Bider = new SelectList(db.Buyers, "BuyerID", "BuyersName", bid.Bider);
@@ -63,7 +65,10 @@ namespace HW8.Controllers
             return View(bid);
         }
 
-       
+
+
+  
+
 
         protected override void Dispose(bool disposing)
         {

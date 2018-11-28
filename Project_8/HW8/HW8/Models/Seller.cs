@@ -18,7 +18,7 @@ namespace HW8.Models
 
         [Required]
         [StringLength(50)]
-        [Display(Name = "Seller")]
+        [Display(Name ="Sellers Name")]
         public string SellersName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

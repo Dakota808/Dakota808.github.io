@@ -14,15 +14,16 @@ namespace HW8.Models
 
         public int? Bider { get; set; }
 
-        [Column(TypeName = "date")]
+        [Display(Name = "Time of Bid")]
         public DateTime TimeStamps { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Display(Name = "Price")]
         public string Prices { get; set; }
 
         public virtual Buyer Buyer { get; set; }
-
+        
         public virtual Item Item1 { get; set; }
     }
 }
