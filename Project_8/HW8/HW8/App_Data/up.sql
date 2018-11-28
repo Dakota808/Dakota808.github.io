@@ -9,7 +9,7 @@ Create Table [dbo].[Sellers](
 );
 
 Create Table [dbo].[Items](
- ItemID int identity (1,1) not null Primary Key,
+ ItemID int identity (1001,1) not null Primary Key,
  Seller int Foreign Key References Sellers(SellerID),
  ItemName varchar (255) not null, 
  ItemDescription varchar (255) not null
@@ -43,6 +43,6 @@ Insert into Sellers(SellersName)
 
 Insert into Bids(Item, Bider, Prices, TimeStamps)
  Values
- (1,3, '$250,000', '12/02/2018 09:04:22'),
- (3, 1, '$95,000', '11/24/2018 08:44:03'),
- (2, 2, '$100,000', '11/18/2018 10:24:32');
+ (1001,3, '$250,000', '12/02/2018 09:04:22'),
+ (1003, 1, '$95,000', '11/24/2018 08:44:03'),
+ (1002, 2, '$100,000', '11/18/2018 10:24:32');

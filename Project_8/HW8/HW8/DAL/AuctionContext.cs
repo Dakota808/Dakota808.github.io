@@ -1,15 +1,14 @@
-using System;
-using System.Data.Entity;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using HW8.Models;
-
-namespace HW8.DAL
+namespace HW8.Models
 {
-    public partial class BidContext : DbContext
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class AuctionContext : DbContext
     {
-        public BidContext()
-            : base("name=BidContext")
+        public AuctionContext()
+            : base("name=AuctionContext")
         {
         }
 

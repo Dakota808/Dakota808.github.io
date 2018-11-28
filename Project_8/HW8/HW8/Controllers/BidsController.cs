@@ -6,15 +6,35 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using HW8.DAL;
 using HW8.Models;
 
 namespace HW8.Controllers
 {
     public class BidsController : Controller
     {
-        private BidContext db = new BidContext();
+        private AuctionContext db = new AuctionContext();
 
+        // GET: Bids
+        public ActionResult Index()
+        {
+            var bids = db.Bids.Include(b => b.Buyer).Include(b => b.Item1);
+            return View(bids.ToList());
+        }
+
+        // GET: Bids/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Bid bid = db.Bids.Find(id);
+            if (bid == null)
+            {
+                return HttpNotFound();
+            }
+            return View(bid);
+        }
 
         // GET: Bids/Create
         public ActionResult Create()
@@ -35,13 +55,15 @@ namespace HW8.Controllers
             {
                 db.Bids.Add(bid);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Items");
+                return RedirectToAction("Details","Items", new {id = bid.Item});
             }
 
             ViewBag.Bider = new SelectList(db.Buyers, "BuyerID", "BuyersName", bid.Bider);
             ViewBag.Item = new SelectList(db.Items, "ItemID", "ItemName", bid.Item);
             return View(bid);
         }
+
+       
 
         protected override void Dispose(bool disposing)
         {

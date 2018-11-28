@@ -6,14 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using HW8.DAL;
 using HW8.Models;
 
 namespace HW8.Controllers
 {
     public class ItemsController : Controller
     {
-        private BidContext db = new BidContext();
+        private AuctionContext db = new AuctionContext();
 
         // GET: Items
         public ActionResult Index()

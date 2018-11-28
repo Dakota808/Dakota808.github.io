@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
-
 namespace HW8.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class Seller
     {
@@ -19,6 +18,7 @@ namespace HW8.Models
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Seller")]
         public string SellersName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
