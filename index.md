@@ -21,3 +21,4 @@ Here is where all of the projects are located:<br>
 [Homework #5](Project_5.2/HW5blog.md)<br>
 [Homework #6](Project_6/HW6blog.md)<br>
 [Homework #7](Project_7.3/HW7blog.md)<br>
+[Homework #8](Project_8/HW8blog.md)<br>
