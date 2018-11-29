@@ -1,26 +1,37 @@
 ﻿Create Table [dbo].[Buyers](
- BuyerID int identity (1,1) not null Primary Key,
- BuyersName varchar(50) not  null
+ BuyerID int identity (1,1) not null,
+ BuyersName varchar(50) not  null,
+ 
+ Constraint [PK_dbo.Buyers] Primary Key Clustered (BuyerID ASC),
 );
 
 Create Table [dbo].[Sellers](
- SellerID int identity (1,1) not null Primary Key,
- SellersName varchar (50) not null
+ SellerID int identity (1,1) not null,
+ SellersName varchar (50) not null,
+
+ Constraint [PK_dbo.Sellers] Primary Key Clustered (SellerID ASC)
 );
 
 Create Table [dbo].[Items](
- ItemID int identity (1001,1) not null Primary Key,
- Seller int Foreign Key References Sellers(SellerID),
- ItemName varchar (255) not null, 
- ItemDescription varchar (255) not null
+ ItemID int identity (1001,1) not null,
+ Seller int					  not null,
+ ItemName varchar (255)		  not null, 
+ ItemDescription varchar(255) not null,
+
+ Constraint [PK_dbo.Items] Primary Key Clustered (ItemID ASC),
+ Constraint [FK_dbo.Items] Foreign Key  (Seller) References [dbo].[Sellers] (SellerID)
 );
 
 Create Table [dbo].[Bids](
- BidID int identity (1,1) not null Primary Key, 
- Item int Foreign Key References Items (ItemID),
- Bider int Foreign Key References Buyers (BuyerID),
+ BidID int identity (1,1) not null, 
+ Item int not null,
+ Bider int not null,
  TimeStamps Datetime not null,
  Prices int not null
+
+ Constraint [PK_dbo.Bids] Primary Key Clustered (BidID ASC),
+ Constraint [FK_dbo.Bids] Foreign Key  (Item) References [dbo].[Items] (ItemID),
+ Constraint [FK2_dbo.Bids] Foreign Key (Bider) References [dbo].[Buyers] (BuyerID)
 );
 
 Insert into Buyers(BuyersName)
