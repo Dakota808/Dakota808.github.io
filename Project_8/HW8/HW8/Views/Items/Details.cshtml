@@ -6,11 +6,13 @@
 
 <h2>Details</h2>
 
+@* Done with out using Ajax *@
 <div>
     <h4>Item</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            <input type="hidden" id="list" value="@Model.ItemID"/>
             @Html.DisplayNameFor(model => model.ItemID)
         </dt>
         <dd>
@@ -46,3 +48,30 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "Index") |
 </p>
+
+
+@*Display a detail page for items using Ajax*@
+
+<h2 class="text-center">Item Bids</h2>
+<div id="Result">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Buyer Name
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody id="TableContent"></tbody>
+    </table>
+</div>
+
+@section DetailScript{
+    <script type="text/javascript" src="~/Scripts/MyBidScript.js"></script>
+    
+    }
+
+<p style="margin-top: 10px; margin-left: 5px" id="ItemTable"></p>

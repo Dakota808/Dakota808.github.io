@@ -21,8 +21,8 @@ namespace HW8.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Bid>()
-                .Property(e => e.Prices)
-                .IsUnicode(false);
+                .Property(e => e.Prices);
+                
 
             modelBuilder.Entity<Buyer>()
                 .Property(e => e.BuyersName)

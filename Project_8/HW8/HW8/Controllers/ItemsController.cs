@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using Newtonsoft.Json;
 using System.Web;
 using System.Web.Mvc;
 using HW8.DAL;
@@ -132,13 +133,11 @@ namespace HW8.Controllers
 
         public JsonResult DisplayBids(int? id)
         {
-            var bidData = db.Items.Where(i => i.ItemID == id)
-                .Select(b => b.Bids)
-                .FirstOrDefault()
-                .Select(b => new { b.Prices, b.Buyer.BuyersName })
-                .OrderByDescending(b => b.Prices)
+            var bidData = db.Bids.Where(i => i.Item1.ItemID == id)
+                .Select(i => new { Buyer = i.Buyer.BuyersName, Price = i.Prices })
+                .OrderByDescending(b => b.Price)
                 .ToList();
-            System.Diagnostics.Debug.WriteLine("Bid Data: " + bidData);
+ 
 
             return Json(bidData, JsonRequestBehavior.AllowGet);
 

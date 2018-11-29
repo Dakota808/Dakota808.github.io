@@ -20,7 +20,7 @@ Create Table [dbo].[Bids](
  Item int Foreign Key References Items (ItemID),
  Bider int Foreign Key References Buyers (BuyerID),
  TimeStamps Datetime not null,
- Prices varchar (255) not null
+ Prices int not null
 );
 
 Insert into Buyers(BuyersName)
@@ -43,6 +43,6 @@ Insert into Sellers(SellersName)
 
 Insert into Bids(Item, Bider, Prices, TimeStamps)
  Values
- (1001,3, '$250,000', '12/02/2018 09:04:22'),
- (1003, 1, '$95,000', '11/24/2018 08:44:03'),
- (1002, 2, '$100,000', '11/18/2018 10:24:32');
+ (1001,3, 250000, '12/02/2018 09:04:22'),
+ (1003, 1, 95000, '11/24/2018 08:44:03'),
+ (1002, 2, 100000, '11/18/2018 10:24:32');

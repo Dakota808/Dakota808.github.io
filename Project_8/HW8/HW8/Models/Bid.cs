@@ -18,9 +18,8 @@ namespace HW8.Models
         public DateTime TimeStamps { get; set; }
 
         [Required]
-        [StringLength(255)]
         [Display(Name = "Price")]
-        public string Prices { get; set; }
+        public int Prices { get; set; }
 
         public virtual Buyer Buyer { get; set; }
         
