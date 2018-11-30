@@ -1,6 +1,9 @@
 # Homework #9 
 ## Deploying onto Azure
 <br>
+Link to Assignment: <br>
+[Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_9)<br>
+[Main Page](https://dakota808.github.io/)
 ## How to setup SQL Database 
 <br>
 1. set up the Resource Group on Azure by using add. <br>
