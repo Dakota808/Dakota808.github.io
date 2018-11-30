@@ -31,7 +31,10 @@
     {
         <tr>
             <th>
-                @Html.DisplayFor(biditem => bid.Item1.ItemName)
+                @Html.DisplayFor(biditem => bid.Item1.ItemID)
+            </th>
+            <th>
+                @Html.ActionLink(bid.Item1.ItemName, "Details", "Items", new {id = bid.Item1.ItemID }, null)
             </th>
             <th>
                 @Html.DisplayFor(biditem => bid.Buyer.BuyersName)
@@ -39,9 +42,16 @@
             <th>
                 @Html.DisplayFor(biditem => bid.Prices)
             </th>
-            <th>
-                @Html.DisplayFor(biditem => bid.TimeStamps)
-            </th>
+            <td>
+                @if (bid.TimeStamps.Date == DateTime.Today)
+                {
+                    @(string.Format("{0:T}", bid.TimeStamps))
+
+                }else
+                {
+                    @Html.DisplayFor(biditem => bid.TimeStamps)
+                }
+            </td>
         </tr>
 
 

@@ -115,6 +115,20 @@ This is desgined to save the new bids that are created and then post it into the
 ### Note:
 <br>
 This was done in a different controller called bidController.<br>
+<p>To make sure timestamp does not show the current date inside of the view we need to make an if statement where if the bid was today only have the time. Else the Date and time will be displayed. Also added a link to the details using the name of the item.</p>
+
+```Html
+  <td>
+                @if (bid.TimeStamps.Date == DateTime.Today)
+                {
+                    @(string.Format("{0:T}", bid.TimeStamps))
+
+                }else
+                {
+                    @Html.DisplayFor(biditem => bid.TimeStamps)
+                }
+            </td>
+```
 
 <p>Most of the code we did was only for certain parts the rest were scaffoled which can be adjusted to meet certain needs such as Removing the functionality of creating your own ID for items. As well setting the timestamp by default instead of typing it.</p>
 
