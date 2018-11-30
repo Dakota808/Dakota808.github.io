@@ -8,7 +8,7 @@ This assignment we are building an application that is using a relation database
 
 Links to Assignment:<br>
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_8/HW8/HW8)
-[Demo](https://youtu.be/3D1ycL9ufZE)
+[Demo](https://youtu.be/977c_phbMiE)
 [Main Page](https://dakota808.github.io/)
 
 <p>This assignment we had to add some simple but yet different tricks that we learned from both homeworks 6 and 7. When working on this the main thing to take a further look into is the use of primary and foreign keys, as well as constraints for these keys. After that using different controllers comes in handy to handle different functions of a application such as in this case we handle bids of certain items. Tables to display current bids or rather the most recent bids. These were the main key take aways to get from this assignment. </p>
@@ -59,7 +59,14 @@ When building the this table we needed to know the top ten recent bids for certa
 ```
 ### Note:
 <br>
-This code is located inside of the Home view folder under the index page.
+This code is located inside of the Home view folder under the index page.<br>
+To send the us to the details page of that item an actionlink that will go into the model bid and search up the item name and once that is completed it will redirect to that page which is all being handled by the set id of that item.<br>
+
+```Html
+            <th>
+                @Html.ActionLink(bid.Item1.ItemName, "Details", "Items", new {id = bid.Item1.ItemID }, null)
+            </th>
+```
 
 ### Top 10 actionResult
 ```CS
@@ -86,6 +93,7 @@ namespace HW8.Controllers
     }
 }
 ```
+<br>
 
 ### Placing Bids
 <br>
