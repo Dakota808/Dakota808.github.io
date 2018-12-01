@@ -8,7 +8,7 @@ This assignment we are building an application that is using a relation database
 
 Links to Assignment:<br>
 [Repository](https://github.com/Dakota808/Dakota808.github.io/tree/master/Project_8/HW8/HW8)
-[Demo](https://youtu.be/977c_phbMiE)
+[Demo](https://www.youtube.com/watch?v=RZlsnHgnZG4)
 [Main Page](https://dakota808.github.io/)
 
 <p>This assignment we had to add some simple but yet different tricks that we learned from both homeworks 6 and 7. When working on this the main thing to take a further look into is the use of primary and foreign keys, as well as constraints for these keys. After that using different controllers comes in handy to handle different functions of a application such as in this case we handle bids of certain items. Tables to display current bids or rather the most recent bids. These were the main key take aways to get from this assignment. </p>
@@ -246,7 +246,8 @@ function DisplayBids(BidTable)
 
         for (var i = 0; i < BidTable.length; i++)
         {
-            $("#table").append("<tr class\"bids\"><td>" + BidTable[i].Buyer + "</td><td>$" + Number(BidTable[i].Price).toLocaleString('en-US', { minimumFractionDigits: 2 }) + "</td></tr>");
+            // This "." is for class names of tables not ID's'
+            $(".table").append("<tr class\"bids\"><td>" + BidTable[i].Buyer + "</td><td>$" + Number(BidTable[i].Price).toLocaleString('en-US', { minimumFractionDigits: 2 }) + "</td></tr>");
         }
     }
 

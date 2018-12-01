@@ -5,9 +5,10 @@ console.log("This is all in javascript");
 // This sets the item ID for each of the different Items
 function data()
 {
+    console.log("Start data");
     var input = document.getElementById("list").value;
     var id = parseInt(input);
-    var source = "/Item/DisplayBids" + id;
+    var source = "/Items/DisplayBids/" + id;
 
     $.ajax({
         type: "GET",
@@ -20,21 +21,26 @@ function data()
 
 function DisplayBids(BidTable)
 {
+    console.log("checking for bids");
     if (BidTable.length === 0)
     {
+        console.log("bid if");
         $("#message").empty();
         $("#message").append("There are no bids currently made to this item");
 
     }
     else
     {
+        console.log("bid else");
         $("#message").empty();
         $(".bids").remove();
 
         for (var i = 0; i < BidTable.length; i++)
         {
-            $("#table").append("<tr class\"bids\"><td>" + BidTable[i].Buyer + "</td><td>$" + Number(BidTable[i].Price).toLocaleString('en-US', { minimumFractionDigits: 2 }) + "</td></tr>");
+            // This "." is for class names of tables not ID's'
+            $(".table").append("<tr class=\"bids\"><td>" + BidTable[i].Buyer + "</td><td>$" + Number(BidTable[i].Price).toLocaleString('en-US', { minimumFractionDigits: 2 }) + "</td></tr>");
         }
+        console.log("For loop complete");
     }
 
 }
@@ -46,7 +52,9 @@ function AjaxError()
 
 function main()
 {
+    console.log("Start Bid");
     data();
+    console.log("End data");
     var interval = 1000 * 5;
     window.setInterval(data, interval);
 }
