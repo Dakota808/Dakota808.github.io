@@ -126,7 +126,10 @@ This was done in a different controller called bidController.<br>
 <p>To make sure timestamp does not show the current date inside of the view we need to make an if statement where if the bid was today only have the time. Else the Date and time will be displayed. Also added a link to the details using the name of the item.</p>
 
 ```Html
-  <td>
+            <th>
+                @Html.ActionLink(bid.Item1.ItemName, "Details", "Items", new {id = bid.Item1.ItemID }, null)
+            </th>
+            <td>
                 @if (bid.TimeStamps.Date == DateTime.Today)
                 {
                     @(string.Format("{0:T}", bid.TimeStamps))
